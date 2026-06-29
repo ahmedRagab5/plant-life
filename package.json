@@ -1,0 +1,47 @@
+{
+  "name": "tomato-disease-classifier-api",
+  "version": "1.0.0",
+  "description": "Backend API for Tomato Disease Classifier with heal plans, real-time notifications, and scan history",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --forceExit --detectOpenHandles",
+    "test:auth": "jest --testPathPattern=auth --forceExit",
+    "test:scan": "jest --testPathPattern=scan --forceExit",
+    "test:healplan": "jest --testPathPattern=healPlan --forceExit"
+  },
+  "keywords": [
+    "tomato",
+    "disease",
+    "classifier",
+    "agriculture",
+    "heal-plan"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "form-data": "^4.0.1",
+    "helmet": "^8.0.0",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.3",
+    "streamifier": "^0.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  }
+}

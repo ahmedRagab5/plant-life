@@ -1,0 +1,283 @@
+[
+  {
+    "disease": "Bacterial_spot",
+    "disease_display": "Bacterial Spot",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "إزالة الأوراق المصابة",
+        "description": "قص جميع الأوراق المصابة والتخلص منها بعيدًا عن المزرعة."
+      },
+      {
+        "day": 0,
+        "title": "الرش بمبيد نحاسي",
+        "description": "استخدم مبيدًا نحاسيًا وفقًا لتعليمات العبوة."
+      },
+      {
+        "day": 2,
+        "title": "فحص النبات",
+        "description": "تحقق من ظهور بقع جديدة."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر الرش إذا استمرت الإصابة."
+      },
+      {
+        "day": 14,
+        "title": "تقييم الحالة",
+        "description": "إذا استمرت الإصابة بشكل كبير، استشر مهندسًا زراعيًا."
+      }
+    ]
+  },
+  {
+    "disease": "Early_blight",
+    "disease_display": "Early Blight",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "إزالة الأوراق المصابة",
+        "description": "تخلص من الأوراق التي تظهر عليها أعراض المرض."
+      },
+      {
+        "day": 0,
+        "title": "الرش بمبيد فطري",
+        "description": "استخدم مبيدًا مناسبًا لللفحة المبكرة."
+      },
+      {
+        "day": 5,
+        "title": "فحص الأوراق الجديدة",
+        "description": "تأكد من عدم انتقال الإصابة."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر الرش إذا لزم الأمر."
+      }
+    ]
+  },
+  {
+    "disease": "Late_blight",
+    "disease_display": "Late Blight",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "إزالة الأجزاء المصابة",
+        "description": "أزل جميع الأجزاء المصابة فورًا."
+      },
+      {
+        "day": 0,
+        "title": "الرش بمبيد فطري",
+        "description": "رش مبيدًا مخصصًا لللفحة المتأخرة."
+      },
+      {
+        "day": 3,
+        "title": "فحص النباتات المجاورة",
+        "description": "راجع النباتات القريبة للتأكد من عدم انتقال المرض."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر الرش حسب الحاجة."
+      },
+      {
+        "day": 14,
+        "title": "تقييم الحالة",
+        "description": "قيّم مدى تحسن النبات."
+      }
+    ]
+  },
+  {
+    "disease": "Leaf_Mold",
+    "disease_display": "Leaf Mold",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "تحسين التهوية",
+        "description": "قلل الرطوبة حول النبات."
+      },
+      {
+        "day": 0,
+        "title": "إزالة الأوراق المصابة",
+        "description": "تخلص من الأوراق المصابة."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر استخدام المبيد الفطري."
+      }
+    ]
+  },
+  {
+    "disease": "Septoria_leaf_spot",
+    "disease_display": "Septoria Leaf Spot",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "إزالة الأوراق المصابة",
+        "description": "تخلص من الأوراق المصابة."
+      },
+      {
+        "day": 0,
+        "title": "الرش بمبيد فطري",
+        "description": "رش مبيدًا مناسبًا."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر الرش."
+      },
+      {
+        "day": 14,
+        "title": "متابعة الإصابة",
+        "description": "افحص النبات بالكامل."
+      }
+    ]
+  },
+  {
+    "disease": "Spider_mites_Two_spotted_spider_mite",
+    "disease_display": "Spider Mites",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "غسل الأوراق",
+        "description": "اغسل الأوراق بالماء لإزالة جزء من الحشرات."
+      },
+      {
+        "day": 0,
+        "title": "الرش بمبيد أكاروسي",
+        "description": "استخدم مبيدًا مخصصًا للعناكب."
+      },
+      {
+        "day": 3,
+        "title": "فحص أسفل الأوراق",
+        "description": "تحقق من وجود العناكب."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر الرش."
+      }
+    ]
+  },
+  {
+    "disease": "Target_Spot",
+    "disease_display": "Target Spot",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "إزالة الأوراق المصابة",
+        "description": "تخلص من الأوراق المصابة."
+      },
+      {
+        "day": 0,
+        "title": "الرش بمبيد فطري",
+        "description": "رش مبيدًا مناسبًا."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر الرش."
+      }
+    ]
+  },
+  {
+    "disease": "Tomato_mosaic_virus",
+    "disease_display": "Tomato Mosaic Virus",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "عزل النبات",
+        "description": "اعزل النبات المصاب عن باقي النباتات."
+      },
+      {
+        "day": 0,
+        "title": "تعقيم الأدوات",
+        "description": "طهر جميع أدوات التقليم."
+      },
+      {
+        "day": 2,
+        "title": "متابعة النباتات المجاورة",
+        "description": "راقب ظهور أعراض جديدة."
+      },
+      {
+        "day": 7,
+        "title": "إزالة النبات إذا ساءت الحالة",
+        "description": "تخلص من النبات إذا أصبحت الإصابة شديدة."
+      }
+    ]
+  },
+  {
+    "disease": "Tomato_Yellow_Leaf_Curl_Virus",
+    "disease_display": "Tomato Yellow Leaf Curl Virus",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "مكافحة الذبابة البيضاء",
+        "description": "ابدأ برنامج مكافحة الذبابة البيضاء."
+      },
+      {
+        "day": 0,
+        "title": "تركيب مصائد صفراء",
+        "description": "ضع مصائد لاصقة صفراء."
+      },
+      {
+        "day": 3,
+        "title": "فحص الحشرات",
+        "description": "تحقق من انخفاض أعداد الذبابة البيضاء."
+      },
+      {
+        "day": 7,
+        "title": "إعادة المكافحة",
+        "description": "كرر المكافحة إذا لزم الأمر."
+      }
+    ]
+  },
+  {
+    "disease": "Powdery_Mildew",
+    "disease_display": "Powdery Mildew",
+    "tasks": [
+      {
+        "day": 0,
+        "title": "إزالة الأوراق المصابة",
+        "description": "تخلص من الأوراق المصابة."
+      },
+      {
+        "day": 0,
+        "title": "الرش بمبيد مناسب",
+        "description": "استخدم مبيدًا للبياض الدقيقي."
+      },
+      {
+        "day": 5,
+        "title": "فحص الإصابة",
+        "description": "تحقق من تحسن النبات."
+      },
+      {
+        "day": 7,
+        "title": "إعادة الرش",
+        "description": "كرر الرش إذا لزم الأمر."
+      }
+    ]
+  },
+  {
+    "disease": "Healthy",
+    "disease_display": "Healthy",
+    "tasks": [
+      {
+        "day": 7,
+        "title": "فحص دوري",
+        "description": "افحص الأوراق والساق."
+      },
+      {
+        "day": 14,
+        "title": "إزالة الحشائش",
+        "description": "نظف المنطقة المحيطة بالنبات."
+      },
+      {
+        "day": 30,
+        "title": "فحص شامل",
+        "description": "تأكد من خلو النبات من أي أعراض مرضية."
+      }
+    ]
+  }
+]
