@@ -97,11 +97,11 @@ const rescan = async (userId, parentScanId, files, io = null) => {
     } else if (severityDelta < 0) {
       notifType = 'severity_improved';
       title = '🌱 تحسن ملحوظ!';
-      message = `انخفضت شدة الإصابة من ${parentSeverity.toFixed(1)}% إلى ${currentSeverity.toFixed(1)}%`;
+      message = 'انخفضت شدة الإصابة من ${parentSeverity.toFixed(1)}% إلى ${currentSeverity.toFixed(1)}%';
     } else {
       notifType = 'severity_worsened';
       title = '⚠️ تنبيه';
-      message = `ارتفعت شدة الإصابة من ${parentSeverity.toFixed(1)}% إلى ${currentSeverity.toFixed(1)}%. يرجى مراجعة خطة العلاج.`;
+      message =' ارتفعت شدة الإصابة من ${parentSeverity.toFixed(1)}% إلى ${currentSeverity.toFixed(1)}%. يرجى مراجعة خطة العلاج.';
     }
 
     await notificationService.createNotification(
@@ -124,10 +124,14 @@ const rescan = async (userId, parentScanId, files, io = null) => {
  */
 const listScans = async (userId, query = {}) => {
   const filter = { user: userId };
-
-  // Text search on disease name / tree status
+// Text search on disease name / tree status
   if (query.q && query.q.trim()) {
-    filter.$text = { $search: query.q.trim() };
+    const searchRegex = new RegExp(query.q.trim(), 'i');
+    filter.$or = [
+      { 'result.main_disease': searchRegex },
+      { 'result.tree_status': searchRegex },
+      { 'result.tree_status_ar': searchRegex },
+    ];
   }
 
   const total = await Scan.countDocuments(filter);
@@ -166,4 +170,54 @@ const getScanById = async (scanId, userId) => {
   return scan;
 };
 
-module.exports = { createScan, rescan, listScans, getScanById };
+/**
+ * Get all rescans for a given parent scan, ordered by date (oldest first).
+ * Used by the Recovery Timeline screen.
+ *
+ * @param {string} parentScanId - The original scan ID
+ * @param {string} userId
+ * @returns {Promise<object>} { rescans: [...] }
+ */
+const getRescansByScanId = async (parentScanId, userId) => {
+  // Verify the parent scan exists and belongs to the user
+  const parentScan = await Scan.findOne({ _id: parentScanId, user: userId })
+    .select('result.avg_severity_all_images createdAt images');
+
+  if (!parentScan) {
+    throw ApiError.notFound('الفحص غير موجود');
+  }
+
+  // Fetch all direct rescans (parentScan = parentScanId)
+  const rescans = await Scan.find({ parentScan: parentScanId, user: userId })
+    .sort({ createdAt: 1 })
+    .select('images result.avg_severity_all_images createdAt severityDelta parentScan')
+    .lean();
+
+  // Compute week number and improved flag for each rescan
+  const parentCreatedAt = parentScan.createdAt;
+  const mappedRescans = rescans.map((rescan, index) => {
+    const msPerWeek = 7 * 24 * 60 * 60 * 1000;
+    const weekNumber =
+      Math.floor((new Date(rescan.createdAt) - new Date(parentCreatedAt)) / msPerWeek) + 1;
+
+    const severity = rescan.result?.avg_severity_all_images ?? null;
+    const delta = rescan.severityDelta ?? null;
+    const improved = delta !== null ? delta < 0 : null;
+
+    return {
+      _id: rescan._id,
+      week: weekNumber > 0 ? weekNumber : index + 1,
+      createdAt: rescan.createdAt,
+      severity,
+      image: rescan.images?.[0]?.url ?? null,
+      improved,
+      comparison: {
+        severityDelta: delta,
+      },
+    };
+  });
+
+  return { rescans: mappedRescans };
+};
+
+module.exports = { createScan, rescan, listScans, getScanById, getRescansByScanId };

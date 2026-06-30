@@ -56,7 +56,7 @@ const acceptPlan = async (userId, scanId, io = null) => {
   const diseaseKey = normalizeDiseaseKey(scan.result.main_disease);
   if (!diseaseKey) {
     throw ApiError.badRequest(
-      `لا توجد خطة علاج متاحة للمرض: ${scan.result.main_disease}`
+     ' لا توجد خطة علاج متاحة للمرض: ${scan.result.main_disease}'
     );
   }
 
@@ -92,7 +92,23 @@ const acceptPlan = async (userId, scanId, io = null) => {
   scan.linkedHealPlan = healPlan._id;
   await scan.save();
 
-  return healPlan;
+  // 7. Emit real-time notification
+  if (io) {
+    await notificationService.createNotification(
+      {
+        user: userId,
+        healPlan: healPlan._id,
+        type: 'plan_completed', // Wait, maybe use a different type or just use an existing one, or simply generic. The frontend just displays the message.
+        title: '📋 تم إنشاء خطة العلاج',
+        message:' تم البدء بخطة علاج "${healPlan.disease}". تابع المهام المطلوبة لتعافي نباتك.',
+      },
+      io
+    );
+  }
+
+  // Expose scanId as a top-level field
+  const planObj = healPlan.toJSON();
+  return { ...planObj, scanId };
 };
 
 /**
@@ -114,8 +130,7 @@ const toggleTask = async (healPlanId, taskIndex, userId, io = null) => {
   if (healPlan.status === 'cancelled') {
     throw ApiError.badRequest('خطة العلاج ملغاة');
   }
-
-  if (taskIndex < 0 || taskIndex >= healPlan.tasks.length) {
+if (taskIndex < 0 || taskIndex >= healPlan.tasks.length) {
     throw ApiError.badRequest('رقم المهمة غير صالح');
   }
 
@@ -143,7 +158,7 @@ const toggleTask = async (healPlanId, taskIndex, userId, io = null) => {
           healPlan: healPlan._id,
           type: 'plan_completed',
           title: '🎉 تهانينا!',
-          message: `تم إكمال خطة علاج "${healPlan.disease}" بنجاح! يمكنك الآن إجراء فحص جديد للتأكد من تعافي النبات.`,
+          message:' تم إكمال خطة علاج "${healPlan.disease}" بنجاح! يمكنك الآن إجراء فحص جديد للتأكد من تعافي النبات.',
         },
         io
       );
@@ -179,16 +194,20 @@ const cancelPlan = async (healPlanId, userId) => {
 
 /**
  * Get a heal plan by ID.
+ * Returns the plan with an explicit top-level scanId field.
  */
 const getPlanById = async (healPlanId, userId) => {
   const healPlan = await HealPlan.findOne({ _id: healPlanId, user: userId })
-    .populate('scan', 'result.main_disease result.avg_severity_all_images images createdAt');
+    .populate('scan', 'result.main_disease result.avg_severity_all_images images createdAt')
+    .lean({ virtuals: true });
 
   if (!healPlan) {
     throw ApiError.notFound('خطة العلاج غير موجودة');
   }
 
-  return healPlan;
+  // Expose scanId as a top-level field for the mobile app
+  const scanId = healPlan.scan?._id ?? healPlan.scan ?? null;
+  return { ...healPlan, scanId };
 };
 
 /**
@@ -212,8 +231,14 @@ const listPlans = async (userId, query = {}) => {
     .populate('scan', 'result.main_disease result.tree_status_ar images createdAt')
     .lean({ virtuals: true });
 
+  // Expose scanId as a top-level field on each plan
+  const healPlansWithScanId = healPlans.map((plan) => ({
+    ...plan,
+    scanId: plan.scan?._id ?? plan.scan ?? null,
+  }));
+
   return {
-    healPlans,
+    healPlans: healPlansWithScanId,
     pagination: {
       page: paginationInfo.page,
       limit: paginationInfo.limit,
@@ -244,3 +269,4 @@ module.exports = {
   getTemplates,
   normalizeDiseaseKey,
 };
+

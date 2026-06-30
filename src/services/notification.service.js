@@ -19,8 +19,8 @@ const createNotification = async (data, io = null) => {
 
   // Emit real-time notification via Socket.IO
   if (io) {
-    io.to(`user:${data.user}`).emit('notification', {
-      id: notification._id,
+    io.to('user:${data.user}').emit('notification', {
+      _id: notification._id,
       type: notification.type,
       title: notification.title,
       message: notification.message,

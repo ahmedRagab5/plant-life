@@ -15,6 +15,10 @@ router.post('/', upload.array('images', 10), scanController.createScan);
 // Query params: page, limit, q (search term)
 router.get('/', scanController.listScans);
 
+// GET /api/scans/:scanId/rescans — Get all rescans for a parent scan (Recovery Timeline)
+// ⚠️ Must be declared BEFORE /:id to avoid "rescans" being parsed as an ID
+router.get('/:scanId/rescans', scanController.getRescansByScan);
+
 // GET /api/scans/:id — Get single scan details
 router.get('/:id', scanController.getScan);
 

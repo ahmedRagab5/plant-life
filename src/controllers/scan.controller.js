@@ -71,4 +71,17 @@ const getScan = asyncHandler(async (req, res) => {
   });
 });
 
-module.exports = { createScan, rescan, listScans, getScan };
+/**
+ * GET /api/scans/:scanId/rescans
+ * Get all rescans for a parent scan — used by the Recovery Timeline screen
+ */
+const getRescansByScan = asyncHandler(async (req, res) => {
+  const result = await scanService.getRescansByScanId(req.params.scanId, req.user._id);
+
+  res.status(StatusCodes.OK).json({
+    success: true,
+    data: result,
+  });
+});
+
+module.exports = { createScan, rescan, listScans, getScan, getRescansByScan };
