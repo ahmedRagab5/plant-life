@@ -64,19 +64,26 @@ const acceptPlan = async (userId, scanId, io = null) => {
 
   // 4. Compute scheduled dates based on task days
   const startDate = new Date();
-  const tasks = template.tasks.map((task) => {
-    const scheduledDate = new Date(startDate);
-    scheduledDate.setDate(scheduledDate.getDate() + task.day);
-    return {
-      day: task.day,
-      title: task.title,
-      description: task.description,
-      completed: false,
-      completedAt: null,
-      scheduledDate,
-      notifiedAt: null,
-    };
-  });
+  const tasks = [];
+
+  if (template.plan) {
+    template.plan.forEach((dayGroup) => {
+      const scheduledDate = new Date(startDate);
+      scheduledDate.setDate(scheduledDate.getDate() + dayGroup.day);
+      
+      dayGroup.tasks.forEach((task) => {
+        tasks.push({
+          day: dayGroup.day,
+          title: task.title,
+          description: task.description,
+          completed: false,
+          completedAt: null,
+          scheduledDate,
+          notifiedAt: null,
+        });
+      });
+    });
+  }
 
   // 5. Create heal plan
   const healPlan = await HealPlan.create({
@@ -126,11 +133,11 @@ const toggleTask = async (healPlanId, taskIndex, userId, io = null) => {
   if (!healPlan) {
     throw ApiError.notFound('خطة العلاج غير موجودة');
   }
-
   if (healPlan.status === 'cancelled') {
     throw ApiError.badRequest('خطة العلاج ملغاة');
   }
-if (taskIndex < 0 || taskIndex >= healPlan.tasks.length) {
+
+  if (taskIndex < 0 || taskIndex >= healPlan.tasks.length) {
     throw ApiError.badRequest('رقم المهمة غير صالح');
   }
 
@@ -251,14 +258,49 @@ const listPlans = async (userId, query = {}) => {
 /**
  * Get available heal plan templates.
  */
+// const getTemplates = () => {
+//   return healPlanTemplates.map((t) => {
+//     let taskCount = 0;
+//     let maxDay = 0;
+//     if (t.plan) {
+//       t.plan.forEach((dayGroup) => {
+//         taskCount += dayGroup.tasks.length;
+//         if (dayGroup.day > maxDay) maxDay = dayGroup.day;
+//       });
+//     }
+//     return {
+//       disease: t.disease,
+//       disease_display: t.disease_display,
+//       taskCount,
+//       totalDays: maxDay,
+//     };
+//   });
+// };
+
 const getTemplates = () => {
-  return healPlanTemplates.map((t) => ({
-    disease: t.disease,
-    disease_display: t.disease_display,
-    taskCount: t.tasks.length,
-    totalDays: Math.max(...t.tasks.map((task) => task.day)),
-  }));
+  return healPlanTemplates.map((t) => {
+    let taskCount = 0;
+    let maxDay = 0;
+
+    if (Array.isArray(t.plan)) {
+      t.plan.forEach((dayGroup) => {
+        taskCount += dayGroup.tasks?.length || 0;
+
+        if ((dayGroup.day ?? 0) > maxDay) {
+          maxDay = dayGroup.day;
+        }
+      });
+    }
+
+    return {
+      disease: t.disease,
+      disease_display: t.disease_display,
+      taskCount,
+      totalDays: maxDay,
+    };
+  });
 };
+
 
 module.exports = {
   acceptPlan,
@@ -269,4 +311,3 @@ module.exports = {
   getTemplates,
   normalizeDiseaseKey,
 };
-
