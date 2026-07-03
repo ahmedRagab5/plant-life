@@ -59,6 +59,25 @@ const getPlan = asyncHandler(async (req, res) => {
 });
 
 /**
+ * GET /api/heal-plans/:id/tasks/:taskIndex
+ * Get full details of a single task
+ */
+const getTask = asyncHandler(async (req, res) => {
+  const { id, taskIndex } = req.params;
+
+  const taskDetail = await healPlanService.getTaskDetail(
+    id,
+    parseInt(taskIndex, 10),
+    req.user._id
+  );
+
+  res.status(StatusCodes.OK).json({
+    success: true,
+    data: taskDetail,
+  });
+});
+
+/**
  * PATCH /api/heal-plans/:id/tasks/:taskIndex
  * Toggle task completion ✅
  */
@@ -94,4 +113,4 @@ const cancelPlan = asyncHandler(async (req, res) => {
   });
 });
 
-module.exports = { acceptPlan, listPlans, getTemplates, getPlan, toggleTask, cancelPlan };
+module.exports = { acceptPlan, listPlans, getTemplates, getPlan, getTask, toggleTask, cancelPlan };

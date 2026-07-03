@@ -9,6 +9,7 @@ const authRoutes = require('./routes/auth.routes');
 const scanRoutes = require('./routes/scan.routes');
 const healPlanRoutes = require('./routes/healPlan.routes');
 const notificationRoutes = require('./routes/notification.routes');
+const chatbotRoutes = require('./routes/chatbot.routes');
 
 // Middleware imports
 const errorHandler = require('./middleware/error.middleware');
@@ -47,6 +48,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/scans', scanRoutes);
 app.use('/api/heal-plans', healPlanRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 
 // ─── 404 Handler ────────────────────────────────────────
 app.use((req, res, next) => {

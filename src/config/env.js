@@ -25,6 +25,9 @@ const env = {
 
   // AI Model
   aiModelUrl: process.env.AI_MODEL_URL || 'http://127.0.0.1:8000/analyze_tree',
+
+  // Gemini Chatbot
+  geminiApiKey: process.env.GEMINI_API_KEY,
 };
 
 // Validate required env vars

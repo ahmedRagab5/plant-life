@@ -33,6 +33,9 @@ router.get('/', healPlanController.listPlans);
 // GET /api/heal-plans/:id — Get heal plan with task checklist
 router.get('/:id', healPlanController.getPlan);
 
+// GET /api/heal-plans/:id/tasks/:taskIndex — Get single task full details
+router.get('/:id/tasks/:taskIndex', healPlanController.getTask);
+
 // PATCH /api/heal-plans/:id/tasks/:taskIndex — Toggle task completion
 router.patch('/:id/tasks/:taskIndex', healPlanController.toggleTask);
 
