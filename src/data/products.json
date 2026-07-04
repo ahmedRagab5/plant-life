@@ -1,497 +1,1259 @@
 [
   {
-    "id": "P001",
-    "productName": "Cueva Copper Fungicide",
-    "productNameAr": "مبيد نحاسي كيوفا",
-    "targetDiseases": ["Bacterial_spot", "Early_blight", "Late_blight", "Septoria_leaf_spot", "Leaf_Mold"],
-    "targetDiseasesAr": ["البقعة البكتيرية", "اللفحة المبكرة", "اللفحة المتأخرة", "تبقع أوراق السبتوريا", "عفن الأوراق"],
-    "activeIngredients": ["Copper octanoate 10%"],
-    "activeIngredientsAr": ["أوكتانوات النحاس 10%"],
-    "description": "A broad-spectrum copper-based fungicide and bactericide approved for organic farming. Effective against a wide range of fungal and bacterial diseases in tomatoes.",
-    "descriptionAr": "مبيد فطري وبكتيري واسع الطيف على أساس النحاس، معتمد للزراعة العضوية. فعّال ضد مجموعة واسعة من الأمراض الفطرية والبكتيرية في الطماطم.",
-    "usageInstructions": "Shake well before use. Mix 1–2 oz per gallon of water and spray to thorough coverage of all plant surfaces, including undersides of leaves. Apply at first sign of disease.",
-    "usageInstructionsAr": "يرج جيداً قبل الاستخدام. اخلط 1–2 أونصة لكل غالون ماء ورش لتغطية جميع أسطح النبات بما فيها الجانب السفلي للأوراق. يُطبق عند ظهور أولى أعراض المرض.",
-    "recommendedDosage": "1–2 oz per gallon of water (approximately 7.5–15 ml per liter)",
-    "recommendedDosageAr": "1–2 أونصة لكل غالون ماء (حوالي 7.5–15 مل لكل لتر)",
-    "applicationMethod": "Foliar spray. Repeat every 7–10 days during disease pressure.",
-    "applicationMethodAr": "رش ورقي. يُكرر كل 7–10 أيام في حالة الضغط المرضي.",
-    "safetyPrecautions": [
-      "Wear gloves, goggles, and protective clothing during application.",
-      "Avoid spraying in windy conditions.",
-      "Do not spray when temperatures exceed 90°F (32°C).",
-      "Keep out of reach of children.",
-      "Wash hands thoroughly after handling."
+    "disease": "التبقع البكتيري",
+    "scientificName": "Xanthomonas spp.",
+    "severity": "عالية",
+    "spreadSpeed": "سريع",
+    "isCurable": true,
+    "successRate": "85-90%",
+    "recoverTime": "2-4 أسابيع",
+    "cause": "مرض بكتيري يصيب أوراق وسيقان وثمار الطماطم. ينتقل عن طريق البذور المصابة، ورذاذ مياه الري أو الأمطار، والأدوات الزراعية الملوثة، وملامسة النباتات المصابة. تزداد سرعة انتشاره في الأجواء الدافئة والرطبة.",
+    "symptoms": [
+      "بقع صغيرة مائية على الأوراق.",
+      "تحول البقع إلى اللون البني أو الأسود.",
+      "وجود هالة صفراء حول بعض البقع.",
+      "اصفرار وسقوط الأوراق المصابة.",
+      "ظهور بقع خشنة أو فلينية على الثمار.",
+      "انخفاض جودة وإنتاج المحصول."
     ],
-    "safetyPrecautionsAr": [
-      "ارتدِ قفازات ونظارات وملابس واقية أثناء التطبيق.",
-      "تجنب الرش في الأيام العاصفة.",
-      "لا ترش عندما تتجاوز درجة الحرارة 32 درجة مئوية.",
-      "أبعد عن متناول الأطفال.",
-      "اغسل يديك جيداً بعد التعامل معه."
+    "prevention": [
+      "استخدام بذور أو شتلات معتمدة وخالية من الإصابة.",
+      "تعقيم أدوات التقليم قبل وبعد الاستخدام.",
+      "تجنب الري بالرش واستخدام الري بالتنقيط.",
+      "إزالة بقايا النباتات المصابة بعد انتهاء الموسم.",
+      "ترك مسافات مناسبة بين النباتات لتحسين التهوية.",
+      "فحص النباتات مرة واحدة أسبوعيًا على الأقل."
     ],
-    "additionalNotes": "Copper can accumulate in soil with repeated use; rotate with other products. Do not mix with products containing sulfur.",
-    "additionalNotesAr": "قد يتراكم النحاس في التربة عند الاستخدام المتكرر؛ يُنصح بالتناوب مع منتجات أخرى. لا تخلطه مع منتجات تحتوي على الكبريت."
+    "recommendedProducts": [
+      {
+        "tradeName": "Kocide 2000",
+        "company": "Corteva",
+        "activeIngredient": "Copper Hydroxide",
+        "type": "وقائي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      },
+      {
+        "tradeName": "Coprantol",
+        "company": "Agrochem",
+        "activeIngredient": "Copper Oxychloride",
+        "type": "وقائي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      }
+    ],
+    "whenToHarvest": "لا يتم حصاد الثمار إلا بعد انتهاء فترة الأمان الخاصة بآخر مبيد تم استخدامه.",
+    "emergency": true,
+    "days": [
+      {
+        "day": 0,
+        "title": "اكتشاف الإصابة",
+        "tasks": [
+          {
+            "title": "فحص جميع النباتات",
+            "description": "افحص كل النباتات الموجودة في نفس الصف أو المنطقة، مع التركيز على الأوراق السفلية والثمار الصغيرة. حدد جميع النباتات التي تظهر عليها بقع بنية أو سوداء.",
+            "why": "لتحديد مدى انتشار المرض قبل بدء العلاج.",
+            "tips": [
+              "يفضل إجراء الفحص صباحًا.",
+              "استخدم قفازات أثناء الفحص."
+            ],
+            "warnings": [
+              "لا تنتقل مباشرة من نبات مصاب إلى نبات سليم دون تعقيم اليدين."
+            ],
+            "estimatedTime": "20 دقيقة"
+          },
+          {
+            "title": "إزالة الأوراق المصابة",
+            "description": "قص جميع الأوراق التي تحتوي على بقع واضحة باستخدام مقص معقم، ثم ضعها في كيس محكم وأخرجها من المزرعة.",
+            "why": "لتقليل مصدر العدوى ومنع انتقال البكتيريا للنباتات الأخرى.",
+            "tips": [
+              "عقم المقص بعد كل نبات بالكحول 70٪.",
+              "اقص الأوراق فقط ولا تجرح الساق."
+            ],
+            "warnings": [
+              "لا تترك الأوراق على الأرض.",
+              "لا تستخدمها في السماد العضوي."
+            ],
+            "estimatedTime": "20 دقيقة"
+          },
+          {
+            "title": "إيقاف الري بالرش",
+            "description": "إذا كنت تستخدم الري بالرش، أوقفه فورًا واستبدله بالري بالتنقيط أو الري المباشر للتربة.",
+            "why": "لأن قطرات الماء تنقل البكتيريا بسرعة بين النباتات.",
+            "tips": [
+              "قلل كمية المياه الزائدة."
+            ],
+            "warnings": [
+              "تجنب بلل الأوراق أثناء الري."
+            ],
+            "estimatedTime": "5 دقائق"
+          },
+          {
+            "title": "الرش بالمبيد النحاسي",
+            "description": "استخدم أحد المبيدات الموصى بها مع الالتزام بالجرعة الموجودة على ملصق العبوة، مع تغطية جميع أجزاء النبات خاصة السطح السفلي للأوراق.",
+            "why": "لإبطاء نشاط البكتيريا وحماية الأنسجة السليمة.",
+            "tips": [
+              "الرش صباحًا أو قبل الغروب.",
+              "تأكد من وصول الرذاذ لكل أجزاء النبات."
+            ],
+            "warnings": [
+              "لا تزد الجرعة.",
+              "لا ترش أثناء المطر أو الرياح."
+            ],
+            "estimatedTime": "25 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "المتابعة الأولى",
+        "tasks": [
+          {
+            "title": "إعادة الفحص",
+            "description": "افحص جميع النباتات مرة أخرى وابحث عن بقع جديدة أو أوراق بدأت في الاصفرار.",
+            "why": "لاكتشاف أي انتشار جديد مبكرًا.",
+            "tips": [
+              "ركز على النباتات المجاورة للمصاب."
+            ],
+            "warnings": [
+              "لا تهمل النباتات التي تبدو سليمة."
+            ],
+            "estimatedTime": "15 دقيقة"
+          },
+          {
+            "title": "إزالة الإصابات الجديدة",
+            "description": "إذا ظهرت أوراق مصابة جديدة، قم بإزالتها بنفس الطريقة السابقة.",
+            "why": "لمنع زيادة الحمل البكتيري داخل الحقل.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "10 دقائق"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "إعادة المكافحة",
+        "tasks": [
+          {
+            "title": "إعادة الرش",
+            "description": "كرر الرش إذا استمرت الظروف الرطبة أو ظهرت إصابات جديدة، مع الالتزام بتعليمات ملصق المبيد.",
+            "why": "لحماية النموات الحديثة وتقليل فرصة عودة المرض.",
+            "tips": [
+              "راجع توقعات الطقس قبل الرش."
+            ],
+            "warnings": [
+              "لا تتجاوز عدد الرشات الموصى بها."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 14,
+        "title": "التقييم النهائي",
+        "tasks": [
+          {
+            "title": "تقييم نجاح العلاج",
+            "description": "قارن حالة النبات بما كانت عليه عند بداية العلاج. إذا توقفت البقع الجديدة وظهر نمو جديد سليم، فهذا يدل على نجاح الخطة.",
+            "why": "لتحديد الحاجة إلى إجراءات إضافية أو الاكتفاء بالمتابعة.",
+            "tips": [
+              "التقط صورة للنبات للمقارنة."
+            ],
+            "warnings": [
+              "إذا استمرت الإصابة في معظم النباتات، استشر مهندسًا زراعيًا."
+            ],
+            "estimatedTime": "15 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P002",
-    "productName": "Daconil Fungicide (Chlorothalonil)",
-    "productNameAr": "مبيد داكونيل الفطري (كلوروثالونيل)",
-    "targetDiseases": ["Early_blight", "Late_blight", "Septoria_leaf_spot", "Target_Spot", "Leaf_Mold"],
-    "targetDiseasesAr": ["اللفحة المبكرة", "اللفحة المتأخرة", "تبقع أوراق السبتوريا", "البقعة الهدفية", "عفن الأوراق"],
-    "activeIngredients": ["Chlorothalonil 29.6%"],
-    "activeIngredientsAr": ["كلوروثالونيل 29.6%"],
-    "description": "A contact fungicide providing preventive protection against a wide spectrum of fungal diseases in tomatoes. It forms a protective barrier on plant surfaces.",
-    "descriptionAr": "مبيد فطري تلامسي يوفر حماية وقائية ضد طيف واسع من الأمراض الفطرية في الطماطم. يُشكّل حاجزاً وقائياً على أسطح النباتات.",
-    "usageInstructions": "Mix 1 teaspoon (2.5 ml) per quart of water or 1 tablespoon (7.5 ml) per gallon. Spray all plant surfaces to complete coverage. Apply before disease onset for best results.",
-    "usageInstructionsAr": "اخلط ملعقة صغيرة (2.5 مل) لكل ربع غالون أو ملعقة كبيرة (7.5 مل) لكل غالون ماء. رش جميع أسطح النبات لتغطية كاملة. يُطبق قبل ظهور المرض للحصول على أفضل النتائج.",
-    "recommendedDosage": "2.5 ml per liter of water (preventive); 5 ml per liter (curative)",
-    "recommendedDosageAr": "2.5 مل لكل لتر ماء (وقائي)؛ 5 مل لكل لتر (علاجي)",
-    "applicationMethod": "Foliar spray. Apply every 7 days under disease pressure, every 14 days preventively.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 7 أيام عند الضغط المرضي، وكل 14 يوماً كإجراء وقائي.",
-    "safetyPrecautions": [
-      "Use full personal protective equipment (PPE): gloves, goggles, respirator.",
-      "Classified as a potential carcinogen — minimize exposure.",
-      "Do not apply near water sources or in rain.",
-      "Pre-harvest interval: 0 days for tomatoes.",
-      "Store in original container in cool dry place."
+    "disease": "اللفحة المبكرة",
+    "scientificName": "Alternaria solani",
+    "severity": "عالية",
+    "spreadSpeed": "متوسط",
+    "isCurable": true,
+    "successRate": "85-95%",
+    "recoverTime": "2-3 أسابيع",
+    "cause": "مرض فطري يسببه الفطر Alternaria solani. ينتشر عن طريق الجراثيم الموجودة في التربة وبقايا النباتات المصابة، كما تساعد الرطوبة العالية، وابتلال الأوراق لفترات طويلة، ودرجات الحرارة بين 24 و30 درجة مئوية على زيادة سرعة انتشاره.",
+    "symptoms": [
+      "ظهور بقع بنية دائرية ذات حلقات متداخلة تشبه الهدف.",
+      "تبدأ الإصابة غالبًا في الأوراق السفلية.",
+      "اصفرار الأوراق ثم سقوطها.",
+      "قد تظهر بقع غائرة على الثمار بالقرب من العنق.",
+      "ضعف نمو النبات وانخفاض الإنتاج."
     ],
-    "safetyPrecautionsAr": [
-      "استخدم معدات الحماية الشخصية كاملة: قفازات، نظارات، قناع.",
-      "مصنّف كمادة مسرطنة محتملة — قلل من التعرض.",
-      "لا تطبق بالقرب من مصادر المياه أو في الأمطار.",
-      "فترة ما قبل الحصاد: 0 أيام للطماطم.",
-      "احفظه في العبوة الأصلية في مكان بارد وجاف."
+    "prevention": [
+      "إزالة بقايا النباتات المصابة بعد الحصاد.",
+      "استخدام الري بالتنقيط بدلًا من الري بالرش.",
+      "تحسين التهوية بين النباتات.",
+      "تطبيق دورة زراعية وعدم زراعة الطماطم في نفس المكان كل موسم.",
+      "التسميد المتوازن وتجنب الإفراط في النيتروجين.",
+      "الفحص الأسبوعي للأوراق السفلية."
     ],
-    "additionalNotes": "Do not apply more than 8 times per season. Resistance may develop — rotate with fungicides with different modes of action.",
-    "additionalNotesAr": "لا تطبق أكثر من 8 مرات في الموسم. قد تتطور المقاومة — قم بالتناوب مع مبيدات فطرية ذات آليات عمل مختلفة."
+    "recommendedProducts": [
+      {
+        "tradeName": "Amistar Top 325 SC",
+        "company": "Syngenta",
+        "activeIngredient": "Azoxystrobin + Difenoconazole",
+        "type": "وقائي وعلاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      },
+      {
+        "tradeName": "Score 250 EC",
+        "company": "Syngenta",
+        "activeIngredient": "Difenoconazole",
+        "type": "علاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      },
+      {
+        "tradeName": "Bravo Top",
+        "company": "Syngenta",
+        "activeIngredient": "Chlorothalonil + Difenoconazole",
+        "type": "وقائي وعلاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      }
+    ],
+    "whenToHarvest": "يتم الحصاد فقط بعد انتهاء فترة الأمان (PHI) المدونة على ملصق آخر مبيد تم استخدامه.",
+    "emergency": false,
+    "days": [
+      {
+        "day": 0,
+        "title": "بداية العلاج",
+        "tasks": [
+          {
+            "title": "فحص النباتات بالكامل",
+            "description": "افحص جميع النباتات مع التركيز على الأوراق السفلية، وحدد النباتات التي تحتوي على بقع بنية دائرية ذات حلقات متداخلة.",
+            "why": "لتحديد مدى انتشار المرض واختيار النباتات التي تحتاج إلى تدخل سريع.",
+            "tips": [
+              "يفضل الفحص في الصباح.",
+              "التقط صورًا للنباتات للمقارنة لاحقًا."
+            ],
+            "warnings": [
+              "لا تبدأ بالعلاج قبل تحديد جميع أماكن الإصابة."
+            ],
+            "estimatedTime": "20 دقيقة"
+          },
+          {
+            "title": "إزالة الأوراق المصابة",
+            "description": "قص جميع الأوراق التي تظهر عليها أعراض الإصابة باستخدام أداة معقمة، ثم ضعها في كيس مغلق وتخلص منها خارج المزرعة.",
+            "why": "لتقليل كمية الجراثيم ومنع انتقالها إلى الأوراق السليمة.",
+            "tips": [
+              "ابدأ بالأوراق السفلية.",
+              "عقم المقص بعد كل نبات."
+            ],
+            "warnings": [
+              "لا تترك الأوراق المصابة على سطح التربة."
+            ],
+            "estimatedTime": "20 دقيقة"
+          },
+          {
+            "title": "الرش بالمبيد الفطري",
+            "description": "استخدم أحد المبيدات الموصى بها مع الالتزام بالجرعة الموجودة على الملصق، مع تغطية جميع أجزاء النبات.",
+            "why": "لإيقاف نمو الفطر وحماية النموات الجديدة.",
+            "tips": [
+              "رش السطح العلوي والسفلي للأوراق.",
+              "الرش قبل الغروب أو في الصباح الباكر."
+            ],
+            "warnings": [
+              "لا ترش أثناء الرياح أو الأمطار.",
+              "لا تخلط المبيدات دون توصية."
+            ],
+            "estimatedTime": "25 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "المراجعة الأولى",
+        "tasks": [
+          {
+            "title": "متابعة ظهور بقع جديدة",
+            "description": "أعد فحص النباتات وابحث عن أي بقع جديدة أو أوراق بدأت في الاصفرار.",
+            "why": "لاكتشاف استمرار نشاط الفطر مبكرًا.",
+            "tips": [
+              "افحص أيضًا النباتات المجاورة."
+            ],
+            "warnings": [
+              "لا تؤجل إزالة الأوراق الجديدة المصابة."
+            ],
+            "estimatedTime": "15 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "إعادة المكافحة",
+        "tasks": [
+          {
+            "title": "إعادة الرش",
+            "description": "كرر الرش إذا استمرت الظروف المناسبة لانتشار المرض أو ظهرت إصابات جديدة، مع إمكانية استخدام مادة فعالة مختلفة إذا أوصى المختص بذلك.",
+            "why": "لحماية النموات الحديثة وتقليل فرص تكوين مقاومة للمبيدات.",
+            "tips": [
+              "راجع توقعات الطقس قبل الرش."
+            ],
+            "warnings": [
+              "لا تستخدم نفس المادة الفعالة بشكل متكرر لفترات طويلة."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 14,
+        "title": "التقييم النهائي",
+        "tasks": [
+          {
+            "title": "تقييم حالة النبات",
+            "description": "إذا لم تظهر بقع جديدة وبدأت الأوراق الحديثة بالنمو بشكل طبيعي، استمر في إجراءات الوقاية فقط. أما إذا زادت الإصابة، فكرر برنامج المكافحة أو استشر مهندسًا زراعيًا.",
+            "why": "لتحديد نجاح خطة العلاج أو الحاجة لتعديلها.",
+            "tips": [
+              "سجل ملاحظاتك داخل التطبيق لمتابعة الحالة."
+            ],
+            "warnings": [
+              "لا تهمل الفحص الأسبوعي حتى بعد اختفاء الأعراض."
+            ],
+            "estimatedTime": "15 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P003",
-    "productName": "Revus Top (Mandipropamid + Difenoconazole)",
-    "productNameAr": "ريفوس توب (مانديبروباميد + ديفينوكونازول)",
-    "targetDiseases": ["Late_blight", "Early_blight", "Target_Spot"],
-    "targetDiseasesAr": ["اللفحة المتأخرة", "اللفحة المبكرة", "البقعة الهدفية"],
-    "activeIngredients": ["Mandipropamid 25%", "Difenoconazole 25%"],
-    "activeIngredientsAr": ["مانديبروباميد 25%", "ديفينوكونازول 25%"],
-    "description": "A systemic fungicide combining two active ingredients with different modes of action. Provides both protective and curative activity against late blight and early blight. Excellent rainfast properties.",
-    "descriptionAr": "مبيد فطري جهازي يجمع بين مادتين فعّالتين بآليتَي عمل مختلفتَين. يوفر نشاطاً وقائياً وعلاجياً ضد اللفحة المتأخرة والمبكرة. ممتاز في مقاومة الغسل بالمطر.",
-    "usageInstructions": "Mix 7–14 ml per 10 liters of water. Spray to full coverage of foliage. Begin applications before disease onset or at first sign of infection.",
-    "usageInstructionsAr": "اخلط 7–14 مل لكل 10 لترات ماء. رش لتغطية كاملة للأوراق. ابدأ التطبيقات قبل ظهور المرض أو عند أول بادرة للإصابة.",
-    "recommendedDosage": "7–14 ml per 10 liters of water",
-    "recommendedDosageAr": "7–14 مل لكل 10 لترات ماء",
-    "applicationMethod": "Foliar spray. Apply every 7–10 days. Maximum 4 applications per season.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 7–10 أيام. الحد الأقصى 4 تطبيقات في الموسم.",
-    "safetyPrecautions": [
-      "Wear protective gloves, clothing, and eye protection.",
-      "Do not allow runoff into water bodies.",
-      "Pre-harvest interval: 1 day.",
-      "Harmful if swallowed — keep away from children.",
-      "Wash equipment thoroughly after use."
+    "disease": "اللفحة المتأخرة",
+    "scientificName": "Phytophthora infestans",
+    "severity": "عالية جدًا",
+    "spreadSpeed": "سريع جدًا",
+    "isCurable": true,
+    "successRate": "70-85%",
+    "recoverTime": "3-4 أسابيع",
+    "cause": "مرض يسببه الكائن الشبيه بالفطريات Phytophthora infestans، ويعد من أخطر أمراض الطماطم. ينتشر بسرعة كبيرة في الأجواء الباردة والرطبة، خاصة بعد الأمطار أو عند ارتفاع الرطوبة، ويمكن أن يدمر المحصول بالكامل خلال أيام إذا لم يتم التدخل مبكرًا.",
+    "symptoms": [
+      "بقع بنية أو سوداء كبيرة على الأوراق.",
+      "وجود طبقة بيضاء زغبية أسفل الأوراق في الصباح الباكر.",
+      "ذبول سريع للأوراق والسيقان.",
+      "بقع بنية صلبة على الثمار.",
+      "تعفن الثمار وسقوطها.",
+      "انتشار سريع للإصابة بين النباتات."
     ],
-    "safetyPrecautionsAr": [
-      "ارتدِ قفازات واقية وملابس وحماية للعينين.",
-      "لا تسمح بجريان المبيد نحو المسطحات المائية.",
-      "فترة ما قبل الحصاد: يوم واحد.",
-      "ضار إذا ابتُلع — أبعد عن متناول الأطفال.",
-      "اغسل المعدات جيداً بعد الاستخدام."
+    "prevention": [
+      "استخدام الري بالتنقيط بدلًا من الري بالرش.",
+      "ترك مسافات كافية بين النباتات لتحسين التهوية.",
+      "إزالة الأوراق الملامسة للتربة.",
+      "عدم ترك بقايا النباتات المصابة داخل الحقل.",
+      "الفحص اليومي عند انخفاض درجات الحرارة أو ارتفاع الرطوبة.",
+      "استخدام مبيدات وقائية عند توقع الظروف المناسبة لانتشار المرض."
     ],
-    "additionalNotes": "Excellent for late blight management in high-risk conditions (cool and wet weather). Rotate with non-DMI fungicides to prevent resistance.",
-    "additionalNotesAr": "ممتاز لإدارة اللفحة المتأخرة في ظروف الخطر العالي (الطقس البارد والرطب). قم بالتناوب مع مبيدات من غير مجموعة DMI لمنع المقاومة."
+    "recommendedProducts": [
+      {
+        "tradeName": "Ridomil Gold MZ 68 WG",
+        "company": "Syngenta",
+        "activeIngredient": "Mefenoxam + Mancozeb",
+        "type": "وقائي وعلاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      },
+      {
+        "tradeName": "Folio Gold 537.5 SC",
+        "company": "Syngenta",
+        "activeIngredient": "Metalaxyl-M + Chlorothalonil",
+        "type": "وقائي وعلاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      },
+      {
+        "tradeName": "Revus 250 SC",
+        "company": "Syngenta",
+        "activeIngredient": "Mandipropamid",
+        "type": "وقائي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      }
+    ],
+    "whenToHarvest": "لا يتم حصاد أي ثمار إلا بعد انتهاء فترة الأمان (PHI) الخاصة بآخر مبيد تم استخدامه، والتأكد من سلامة الثمار وعدم إصابتها.",
+    "emergency": true,
+    "days": [
+      {
+        "day": 0,
+        "title": "إجراء عاجل عند اكتشاف المرض",
+        "tasks": [
+          {
+            "title": "فحص جميع النباتات",
+            "description": "افحص الحقل بالكامل وحدد جميع النباتات التي تظهر عليها بقع بنية أو سوداء أو ذبول سريع، مع التركيز على النباتات المجاورة.",
+            "why": "لأن المرض ينتشر بسرعة كبيرة وقد يصيب الحقل بالكامل خلال أيام.",
+            "tips": [
+              "ابدأ الفحص من النباتات السليمة ثم المصابة.",
+              "التقط صورًا لتقييم تطور الحالة."
+            ],
+            "warnings": [
+              "لا تؤخر الفحص حتى اليوم التالي."
+            ],
+            "estimatedTime": "20 دقيقة"
+          },
+          {
+            "title": "إزالة الأجزاء المصابة",
+            "description": "أزل جميع الأوراق والسيقان شديدة الإصابة، وإذا كان النبات مصابًا بالكامل فاقتَلعه وتخلص منه بعيدًا عن المزرعة.",
+            "why": "لتقليل كمية الجراثيم ومنع انتقالها للنباتات السليمة.",
+            "tips": [
+              "ضع الأجزاء المصابة في أكياس مغلقة.",
+              "عقم أدوات التقليم بعد كل نبات."
+            ],
+            "warnings": [
+              "لا تترك أي جزء مصاب داخل الحقل.",
+              "لا تستخدم النباتات المصابة في السماد العضوي."
+            ],
+            "estimatedTime": "30 دقيقة"
+          },
+          {
+            "title": "الرش بالمبيد",
+            "description": "رش أحد المبيدات الموصى بها مع تغطية جميع أجزاء النبات وخاصة السطح السفلي للأوراق، مع الالتزام بالجرعة الموجودة على ملصق العبوة.",
+            "why": "لإبطاء انتشار المرض وحماية النباتات السليمة.",
+            "tips": [
+              "الرش في الصباح الباكر أو قبل الغروب.",
+              "تأكد من تغطية جميع النباتات المجاورة."
+            ],
+            "warnings": [
+              "لا ترش أثناء سقوط الأمطار أو الرياح القوية.",
+              "ارتدِ معدات الوقاية الشخصية أثناء الرش."
+            ],
+            "estimatedTime": "30 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "المراجعة الأولى",
+        "tasks": [
+          {
+            "title": "إعادة الفحص",
+            "description": "افحص النباتات مرة أخرى وابحث عن أي بقع جديدة أو ذبول حديث، وأزل الأجزاء المصابة فورًا.",
+            "why": "لأن الإصابة قد تستمر في الانتشار حتى بعد أول رشة.",
+            "tips": [
+              "ركز على النباتات القريبة من أول إصابة."
+            ],
+            "warnings": [
+              "لا تؤجل إزالة الإصابات الجديدة."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "إعادة المكافحة",
+        "tasks": [
+          {
+            "title": "الرشة الثانية",
+            "description": "كرر الرش إذا استمرت الظروف المناسبة لانتشار المرض أو ظهرت إصابات جديدة، ويمكن تبديل المادة الفعالة وفقًا لتوصيات المختص لتقليل احتمالية المقاومة.",
+            "why": "لحماية النموات الجديدة وتقليل فرص عودة المرض.",
+            "tips": [
+              "راجع توقعات الطقس قبل الرش.",
+              "التزم بالفاصل الزمني الموجود على ملصق المبيد."
+            ],
+            "warnings": [
+              "لا تخلط المبيدات دون توصية فنية.",
+              "لا تكرر نفس المادة الفعالة مرات متتالية إذا كانت هناك بدائل مناسبة."
+            ],
+            "estimatedTime": "25 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 14,
+        "title": "التقييم النهائي",
+        "tasks": [
+          {
+            "title": "تقييم نجاح خطة العلاج",
+            "description": "إذا توقفت الإصابات الجديدة وبدأ النبات في إنتاج أوراق سليمة، استمر في برنامج الوقاية. أما إذا استمر المرض في الانتشار، فكر في إزالة النباتات شديدة الإصابة بالكامل لحماية باقي المحصول.",
+            "why": "للحفاظ على أكبر قدر ممكن من الإنتاج وتقليل الخسائر.",
+            "tips": [
+              "استمر في الفحص الأسبوعي حتى نهاية الموسم."
+            ],
+            "warnings": [
+              "لا تترك النباتات الميتة داخل الحقل."
+            ],
+            "estimatedTime": "15 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P004",
-    "productName": "Acramite (Bifenazate) Miticide",
-    "productNameAr": "أكراميت (بيفينازات) مبيد أكاروسي",
-    "targetDiseases": ["Spider_mites_Two_spotted_spider_mite"],
-    "targetDiseasesAr": ["العنكبوت الأحمر ذو النقطتين"],
-    "activeIngredients": ["Bifenazate 50% WP"],
-    "activeIngredientsAr": ["بيفينازات 50% (مسحوق مبلل)"],
-    "description": "A selective miticide specifically targeting spider mites including the two-spotted spider mite. Works on eggs, nymphs, and adults. Provides rapid knockdown and long residual control.",
-    "descriptionAr": "مبيد أكاروسي انتقائي يستهدف تحديداً العنكبوت الأحمر بما في ذلك ذو النقطتين. يعمل على البيض والحوريات والبالغين. يوفر قضاءً سريعاً ومقاومة طويلة الأمد.",
-    "usageInstructions": "Mix 0.75 lb per 100 gallons of water (approximately 3.5 g per liter). Ensure thorough coverage of all leaf surfaces, especially the undersides where mites congregate.",
-    "usageInstructionsAr": "اخلط 3.5 جرام لكل لتر ماء. تأكد من التغطية الكاملة لجميع أسطح الأوراق، خاصة الجانب السفلي حيث تتجمع العناكب.",
-    "recommendedDosage": "3.5 g per liter of water",
-    "recommendedDosageAr": "3.5 جرام لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Apply once per season. Ensure complete undersurface coverage.",
-    "applicationMethodAr": "رش ورقي. يُطبق مرة واحدة في الموسم. تأكد من التغطية الكاملة للجانب السفلي للأوراق.",
-    "safetyPrecautions": [
-      "Use PPE: gloves, goggles, dust mask when handling powder.",
-      "Do not apply more than once per season to prevent resistance.",
-      "Pre-harvest interval: 3 days.",
-      "Toxic to aquatic organisms — avoid water contamination.",
-      "Store in cool, dry location away from food and feed."
+    "disease": "عفن الأوراق",
+    "scientificName": "Passalora fulva",
+    "severity": "متوسطة",
+    "spreadSpeed": "متوسط",
+    "isCurable": true,
+    "successRate": "90-95%",
+    "recoverTime": "2-3 أسابيع",
+    "cause": "فطر ينتشر في الصوب والأماكن ذات الرطوبة العالية وضعف التهوية.",
+    "symptoms": [
+      "بقع صفراء على السطح العلوي للأوراق.",
+      "طبقة زيتونية أو بنية أسفل الورقة.",
+      "جفاف الأوراق تدريجيًا."
     ],
-    "safetyPrecautionsAr": [
-      "استخدم معدات الحماية: قفازات ونظارات وقناع غبار عند التعامل مع المسحوق.",
-      "لا تطبق أكثر من مرة في الموسم لمنع مقاومة العناكب.",
-      "فترة ما قبل الحصاد: 3 أيام.",
-      "سام للكائنات المائية — تجنب تلوث المياه.",
-      "احفظه في مكان بارد وجاف بعيداً عن الطعام والأعلاف."
+    "prevention": [
+      "خفض الرطوبة.",
+      "تحسين التهوية.",
+      "تجنب تزاحم النباتات."
     ],
-    "additionalNotes": "Highly effective when applied early in mite infestation. No cross-resistance with other classes of miticides. Can be rotated with Oberon or Savey.",
-    "additionalNotesAr": "فعّال للغاية عند التطبيق المبكر في إصابة العناكب. لا توجد مقاومة متبادلة مع فئات أخرى من مبيدات الأكاروس. يمكن التناوب مع أوبيرون أو سافي."
+    "recommendedProducts": [
+      {
+        "tradeName": "Bravo Top",
+        "company": "Syngenta",
+        "activeIngredient": "Chlorothalonil + Difenoconazole",
+        "type": "وقائي وعلاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع الملصق"
+      },
+      {
+        "tradeName": "Tanius 25 EC",
+        "company": "Belal",
+        "activeIngredient": "Difenoconazole",
+        "type": "علاجي",
+        "dose": "40 مل / 100 لتر ماء",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "طبقًا للملصق"
+      }
+    ],
+    "whenToHarvest": "بعد انتهاء فترة الأمان الخاصة بالمبيد.",
+    "emergency": false,
+    "days": [
+      {
+        "day": 0,
+        "title": "بداية العلاج",
+        "tasks": [
+          {
+            "title": "خفض الرطوبة",
+            "description": "افتح الصوبة أو وفر تهوية جيدة وتجنب بلل الأوراق.",
+            "why": "الفطر يحتاج رطوبة مرتفعة لينتشر.",
+            "tips": [
+              "اسقِ صباحًا فقط.",
+              "اترك مسافات بين النباتات."
+            ],
+            "warnings": [
+              "لا ترش ماء على الأوراق."
+            ],
+            "estimatedTime": "10 دقائق"
+          },
+          {
+            "title": "الرش بالمبيد",
+            "description": "رش Bravo Top أو بديل مناسب مع تغطية الورقة من الجهتين.",
+            "why": "لحماية النموات الجديدة وإيقاف انتشار الفطر.",
+            "tips": [
+              "رش قبل الغروب."
+            ],
+            "warnings": [
+              "التزم بالجرعة."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "المتابعة",
+        "tasks": [
+          {
+            "title": "إعادة الرش",
+            "description": "كرر الرش إذا استمرت الرطوبة أو ظهرت إصابات جديدة.",
+            "why": "لمنع عودة المرض.",
+            "tips": [
+              "افحص الأوراق السفلية."
+            ],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P005",
-    "productName": "Imidacloprid 70% WG (Admire Pro)",
-    "productNameAr": "إيميداكلوبريد 70% (أدماير برو)",
-    "targetDiseases": ["Tomato_Yellow_Leaf_Curl_Virus"],
-    "targetDiseasesAr": ["فيروس تجعد أوراق الطماطم الصفراء (TYLCV)"],
-    "activeIngredients": ["Imidacloprid 70% WG"],
-    "activeIngredientsAr": ["إيميداكلوبريد 70% (مبلول حبيبي)"],
-    "description": "A systemic neonicotinoid insecticide that controls whiteflies (Bemisia tabaci), the primary vector of Tomato Yellow Leaf Curl Virus (TYLCV). Controls the insect vector to prevent virus spread — does not treat the virus itself.",
-    "descriptionAr": "مبيد حشري جهازي من مجموعة النيونيكوتينويد يكافح الذبابة البيضاء (بيميسيا تاباسي)، الناقل الرئيسي لفيروس تجعد أوراق الطماطم الصفراء. يكافح الناقل الحشري لمنع انتشار الفيروس — لا يعالج الفيروس ذاته.",
-    "usageInstructions": "Soil drench: dissolve 0.3 g per liter of water and apply around plant root zone. Foliar spray: mix 0.5 g per liter. Apply at transplanting for best systemic uptake.",
-    "usageInstructionsAr": "تغريق التربة: اذب 0.3 جرام لكل لتر ماء وطبق حول منطقة جذر النبات. الرش الورقي: اخلط 0.5 جرام لكل لتر. يُطبق عند الشتل للحصول على أفضل امتصاص جهازي.",
-    "recommendedDosage": "0.3–0.5 g per liter (soil drench or foliar)",
-    "recommendedDosageAr": "0.3–0.5 جرام لكل لتر (تغريق أو رش ورقي)",
-    "applicationMethod": "Soil drench at planting, or foliar spray. Repeat every 15–21 days as needed.",
-    "applicationMethodAr": "تغريق التربة عند الزراعة، أو رش ورقي. يُكرر كل 15–21 يوماً حسب الحاجة.",
-    "safetyPrecautions": [
-      "Highly toxic to bees — do not apply when plants are in flower.",
-      "Wear gloves and eye protection.",
-      "Pre-harvest interval: 7 days.",
-      "Avoid contaminating water sources.",
-      "Rotate with insecticides from different groups to prevent resistance in whitefly populations."
+    "disease": "تبقع أوراق السبتوريا",
+    "scientificName": "Septoria lycopersici",
+    "severity": "عالية",
+    "spreadSpeed": "متوسط",
+    "isCurable": true,
+    "successRate": "85-90%",
+    "recoverTime": "3 أسابيع",
+    "cause": "فطر ينتقل مع رذاذ الماء وبقايا النباتات المصابة.",
+    "symptoms": [
+      "بقع صغيرة رمادية ذات حواف بنية.",
+      "اصفرار الأوراق السفلية.",
+      "تساقط الأوراق."
     ],
-    "safetyPrecautionsAr": [
-      "سام جداً للنحل — لا تطبق عندما تكون النباتات في مرحلة الإزهار.",
-      "ارتدِ قفازات وحماية للعينين.",
-      "فترة ما قبل الحصاد: 7 أيام.",
-      "تجنب تلوث مصادر المياه.",
-      "قم بالتناوب مع مبيدات من مجموعات مختلفة لمنع مقاومة الذبابة البيضاء."
+    "prevention": [
+      "إزالة الأوراق المصابة.",
+      "عدم الري بالرش.",
+      "تغطية التربة بالملش."
     ],
-    "additionalNotes": "Effective for preventing TYLCV in young transplants. Use in combination with reflective mulches and yellow sticky traps for integrated pest management.",
-    "additionalNotesAr": "فعّال لمنع TYLCV في الشتلات الصغيرة. استخدم بالتزامن مع المهاد العاكس والمصائد اللاصقة الصفراء لإدارة الآفات المتكاملة."
+    "recommendedProducts": [
+      {
+        "tradeName": "Bravo Top",
+        "company": "Syngenta",
+        "activeIngredient": "Chlorothalonil + Difenoconazole",
+        "type": "وقائي",
+        "dose": "طبقًا للملصق",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع الملصق"
+      },
+      {
+        "tradeName": "Thiodine 70 WP",
+        "company": "Agres",
+        "activeIngredient": "Thiophanate-Methyl",
+        "type": "علاجي",
+        "dose": "80-100 جم / 100 لتر ماء",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "راجع الملصق"
+      }
+    ],
+    "whenToHarvest": "بعد انتهاء فترة الأمان.",
+    "emergency": false,
+    "days": [
+      {
+        "day": 0,
+        "title": "بداية العلاج",
+        "tasks": [
+          {
+            "title": "إزالة الأوراق المصابة",
+            "description": "تخلص من الأوراق المصابة خارج المزرعة ولا تضعها في الكومة العضوية.",
+            "why": "لتقليل مصدر الجراثيم.",
+            "tips": [
+              "ابدأ بالأوراق السفلية."
+            ],
+            "warnings": [
+              "لا تترك الأوراق على الأرض."
+            ],
+            "estimatedTime": "15 دقيقة"
+          },
+          {
+            "title": "الرش بالمبيد",
+            "description": "استخدم Bravo Top أو Thiodine حسب التوصيات.",
+            "why": "لحماية الأوراق السليمة.",
+            "tips": [
+              "غطِّ النبات بالكامل."
+            ],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "المراجعة",
+        "tasks": [
+          {
+            "title": "إعادة الرش",
+            "description": "كرر الرش إذا ظهرت بقع جديدة.",
+            "why": "لمنع انتشار المرض.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P006",
-    "productName": "Micronized Sulfur (Kumulus DF)",
-    "productNameAr": "كبريت مجهري (كوميلوس DF)",
-    "targetDiseases": ["Powdery_Mildew", "Spider_mites_Two_spotted_spider_mite"],
-    "targetDiseasesAr": ["البياض الدقيقي (العفن الأبيض)", "العنكبوت الأحمر ذو النقطتين"],
-    "activeIngredients": ["Sulfur 80% DF"],
-    "activeIngredientsAr": ["كبريت 80% (مبلل قابل للتشتت)"],
-    "description": "A broad-spectrum contact fungicide and miticide based on micronized sulfur. Approved for organic use. Controls powdery mildew and has suppressive effects on spider mites.",
-    "descriptionAr": "مبيد فطري وأكاروسي تلامسي واسع الطيف على أساس الكبريت المجهري. معتمد للاستخدام العضوي. يكافح البياض الدقيقي وله تأثير كابح على العنكبوت الأحمر.",
-    "usageInstructions": "Mix 3–6 kg per 1000 liters of water (3–6 g per liter). Apply when disease first appears. Ensure thorough coverage. Do not apply in temperatures above 32°C to avoid phytotoxicity.",
-    "usageInstructionsAr": "اخلط 3–6 جرام لكل لتر ماء. طبق عند أول ظهور للمرض. تأكد من التغطية الكاملة. لا تطبق عند درجات حرارة تتجاوز 32 درجة مئوية لتجنب السمية النباتية.",
-    "recommendedDosage": "3–6 g per liter of water",
-    "recommendedDosageAr": "3–6 جرام لكل لتر ماء",
-    "applicationMethod": "Foliar spray or dust. Apply every 7–14 days.",
-    "applicationMethodAr": "رش ورقي أو تغبير. يُطبق كل 7–14 يوماً.",
-    "safetyPrecautions": [
-      "Do not apply when temperatures exceed 32°C — risk of phytotoxicity.",
-      "Do not apply within 2 weeks of oil sprays.",
-      "Do not mix with copper-based fungicides.",
-      "Wear protective mask to avoid inhalation of dust.",
-      "Irritating to eyes and skin — wear PPE."
+    "disease": "العنكبوت الأحمر (الأكاروس)",
+    "scientificName": "Tetranychus urticae",
+    "severity": "عالية",
+    "spreadSpeed": "سريع",
+    "isCurable": true,
+    "successRate": "90%",
+    "recoverTime": "10-14 يومًا",
+    "cause": "آفة حشرية تنشط في الجو الحار والجاف وتتغذى على عصارة الأوراق.",
+    "symptoms": [
+      "نقط صفراء دقيقة على الأوراق.",
+      "وجود خيوط عنكبوتية.",
+      "جفاف الأوراق."
     ],
-    "safetyPrecautionsAr": [
-      "لا تطبق عند تجاوز 32 درجة مئوية — خطر السمية النباتية.",
-      "لا تطبق في غضون أسبوعين من رشات الزيت.",
-      "لا تخلط مع المبيدات النحاسية.",
-      "ارتدِ قناعاً واقياً لتجنب استنشاق الغبار.",
-      "مهيج للعيون والجلد — ارتدِ معدات الحماية."
+    "prevention": [
+      "الفحص الدوري.",
+      "تقليل الإجهاد المائي.",
+      "إزالة الأوراق شديدة الإصابة."
     ],
-    "additionalNotes": "One of the oldest and most reliable fungicides for powdery mildew. Safe for beneficial insects when used correctly. Optimal effectiveness between 20–28°C.",
-    "additionalNotesAr": "أحد أقدم وأكثر المبيدات الفطرية موثوقية لمكافحة البياض الدقيقي. آمن على الحشرات المفيدة عند الاستخدام الصحيح. الفاعلية المثلى بين 20–28 درجة مئوية."
+    "recommendedProducts": [
+      {
+        "tradeName": "Vertimec 1.8 EC",
+        "company": "Syngenta",
+        "activeIngredient": "Abamectin",
+        "type": "أكاروسي",
+        "dose": "طبقًا للملصق",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع الملصق"
+      },
+      {
+        "tradeName": "Katerfull 24 SC",
+        "company": "Agres",
+        "activeIngredient": "Spirodiclofen",
+        "type": "أكاروسي",
+        "dose": "30 سم³ / 100 لتر ماء",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "14 يومًا"
+      }
+    ],
+    "whenToHarvest": "بعد انتهاء فترة الأمان للمبيد المستخدم.",
+    "emergency": true,
+    "days": [
+      {
+        "day": 0,
+        "title": "بداية العلاج",
+        "tasks": [
+          {
+            "title": "إزالة الأوراق شديدة الإصابة",
+            "description": "تخلص من الأوراق التي تحتوي على كثافة عالية من العناكب.",
+            "why": "لتقليل أعداد الآفة بسرعة.",
+            "tips": [
+              "ضع الأوراق في كيس مغلق."
+            ],
+            "warnings": [
+              "لا تهز النبات أثناء الإزالة."
+            ],
+            "estimatedTime": "15 دقيقة"
+          },
+          {
+            "title": "الرش بالأكاروس",
+            "description": "استخدم Vertimec أو Katerfull مع تغطية السطح السفلي للأوراق جيدًا.",
+            "why": "العناكب تختبئ أسفل الأوراق.",
+            "tips": [
+              "رش صباحًا أو قبل الغروب."
+            ],
+            "warnings": [
+              "لا تستخدم نفس المادة الفعالة باستمرار لتجنب المقاومة."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "المتابعة",
+        "tasks": [
+          {
+            "title": "فحص الإصابة",
+            "description": "افحص السطح السفلي للأوراق للتأكد من انخفاض أعداد العناكب.",
+            "why": "لتقييم نجاح العلاج.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "10 دقائق"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "إعادة المكافحة",
+        "tasks": [
+          {
+            "title": "إعادة الرش إذا لزم الأمر",
+            "description": "كرر الرش إذا استمرت الإصابة مع تغيير المادة الفعالة عند الحاجة.",
+            "why": "لمنع تكوين مقاومة للمبيد.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P007",
-    "productName": "Mancozeb 80% WP (Dithane M-45)",
-    "productNameAr": "مانكوزيب 80% (ديثان M-45)",
-    "targetDiseases": ["Early_blight", "Late_blight", "Septoria_leaf_spot", "Target_Spot"],
-    "targetDiseasesAr": ["اللفحة المبكرة", "اللفحة المتأخرة", "تبقع أوراق السبتوريا", "البقعة الهدفية"],
-    "activeIngredients": ["Mancozeb 80% WP (Manganese Ethylene Bisdithiocarbamate)"],
-    "activeIngredientsAr": ["مانكوزيب 80% مسحوق مبلل (اثيلين بيسديثيوكاربامات المنغنيز والزنك)"],
-    "description": "A multi-site contact fungicide with protective action. One of the most widely used fungicides in tomato production globally. Prevents fungal spore germination on plant surfaces.",
-    "descriptionAr": "مبيد فطري تلامسي متعدد المواقع بتأثير وقائي. أحد أكثر المبيدات الفطرية استخداماً في إنتاج الطماطم عالمياً. يمنع إنبات أبواغ الفطر على أسطح النباتات.",
-    "usageInstructions": "Mix 2–3 kg per 1000 liters of water (2–3 g per liter). Spray to cover all green plant parts. Start applications preventively at high risk periods.",
-    "usageInstructionsAr": "اخلط 2–3 جرام لكل لتر ماء. رش لتغطية جميع الأجزاء الخضراء للنبات. ابدأ التطبيقات وقائياً في فترات الخطر العالي.",
-    "recommendedDosage": "2–3 g per liter of water",
-    "recommendedDosageAr": "2–3 جرام لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Apply every 7–14 days. Maximum 10 applications per crop cycle.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 7–14 يوماً. الحد الأقصى 10 تطبيقات في دورة المحصول.",
-    "safetyPrecautions": [
-      "Contains zinc and manganese — avoid excessive application to prevent soil accumulation.",
-      "Pre-harvest interval: 5 days.",
-      "Classified as a possible human carcinogen — minimize dust inhalation.",
-      "Wear full PPE including respirator when mixing.",
-      "Do not mix with alkaline products."
+    "disease": "تبقع الهدف",
+    "scientificName": "Corynespora cassiicola",
+    "severity": "عالية",
+    "spreadSpeed": "متوسط",
+    "isCurable": true,
+    "successRate": "85-90%",
+    "recoverTime": "2-4 أسابيع",
+    "cause": "مرض فطري ينتشر في درجات الحرارة المرتفعة مع الرطوبة العالية، وتساعد الأمطار والري بالرش على انتقال الجراثيم.",
+    "symptoms": [
+      "بقع دائرية بنية ذات حلقات متداخلة تشبه الهدف.",
+      "اصفرار الأوراق ثم سقوطها.",
+      "إصابة الثمار في الحالات الشديدة."
     ],
-    "safetyPrecautionsAr": [
-      "يحتوي على الزنك والمنغنيز — تجنب الاستخدام المفرط لمنع التراكم في التربة.",
-      "فترة ما قبل الحصاد: 5 أيام.",
-      "مصنّف كمادة مسرطنة محتملة — قلل من استنشاق الغبار.",
-      "ارتدِ معدات الحماية الكاملة بما في ذلك قناع التنفس عند التحضير.",
-      "لا تخلطه مع منتجات قلوية."
+    "prevention": [
+      "تحسين التهوية بين النباتات.",
+      "تجنب الري بالرش.",
+      "إزالة الأوراق المصابة أولًا بأول.",
+      "تطهير أدوات التقليم."
     ],
-    "additionalNotes": "Excellent tank-mix partner with systemic fungicides to broaden spectrum and reduce resistance risk. Very cost-effective for broad-spectrum protection.",
-    "additionalNotesAr": "شريك ممتاز للمزج في خزان الرش مع المبيدات الجهازية لتوسيع الطيف وتقليل خطر المقاومة. فعّال جداً من حيث التكلفة للحماية الشاملة."
+    "recommendedProducts": [
+      {
+        "tradeName": "Amistar Top 325 SC",
+        "company": "Syngenta",
+        "activeIngredient": "Azoxystrobin + Difenoconazole",
+        "type": "وقائي وعلاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      },
+      {
+        "tradeName": "Score 250 EC",
+        "company": "Syngenta",
+        "activeIngredient": "Difenoconazole",
+        "type": "علاجي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "راجع الملصق"
+      }
+    ],
+    "whenToHarvest": "يمكن الحصاد بعد انتهاء فترة الأمان المدونة على ملصق المبيد.",
+    "emergency": false,
+    "days": [
+      {
+        "day": 0,
+        "title": "بدء العلاج",
+        "tasks": [
+          {
+            "title": "إزالة الأوراق المصابة",
+            "description": "أزل جميع الأوراق التي تحتوي على بقع دائرية وتخلص منها خارج المزرعة.",
+            "why": "لتقليل كمية الجراثيم ومنع انتشار المرض.",
+            "tips": [
+              "استخدم مقصًا معقمًا.",
+              "اجمع الأوراق في كيس مغلق."
+            ],
+            "warnings": [
+              "لا تترك الأوراق على التربة."
+            ],
+            "estimatedTime": "15 دقيقة"
+          },
+          {
+            "title": "الرش بالمبيد الفطري",
+            "description": "رش النبات بالكامل مع التركيز على السطح السفلي للأوراق.",
+            "why": "لوقف انتشار الفطر وحماية النموات الجديدة.",
+            "tips": [
+              "الرش صباحًا أو قبل الغروب."
+            ],
+            "warnings": [
+              "لا ترش أثناء هبوب الرياح."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "المتابعة",
+        "tasks": [
+          {
+            "title": "إعادة الرش",
+            "description": "كرر الرش إذا استمرت الرطوبة أو ظهرت بقع جديدة.",
+            "why": "لمنع عودة المرض.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P008",
-    "productName": "Previcur Flex (Propamocarb + Fosetyl-Al)",
-    "productNameAr": "بريفيكور فليكس (بروباموكارب + فوسيتيل-Al)",
-    "targetDiseases": ["Late_blight", "Leaf_Mold"],
-    "targetDiseasesAr": ["اللفحة المتأخرة", "عفن الأوراق"],
-    "activeIngredients": ["Propamocarb HCL 53%", "Fosetyl-Aluminium 31%"],
-    "activeIngredientsAr": ["بروباموكارب هيدروكلوريد 53%", "فوسيتيل-ألومنيوم 31%"],
-    "description": "A systemic fungicide with dual action combining upward and downward systemic movement in the plant. Provides both curative and protective activity against Oomycete diseases like late blight.",
-    "descriptionAr": "مبيد فطري جهازي بتأثير مزدوج يجمع بين الحركة الجهازية الصاعدة والهابطة في النبات. يوفر نشاطاً علاجياً ووقائياً ضد أمراض البيضيات مثل اللفحة المتأخرة.",
-    "usageInstructions": "Mix 2–4 ml per liter of water. Can be applied as foliar spray or soil drench. For foliar: spray to run-off. For drench: apply around root zone.",
-    "usageInstructionsAr": "اخلط 2–4 مل لكل لتر ماء. يمكن تطبيقه كرش ورقي أو تغريق للتربة. للرش الورقي: رش حتى نقطة الجريان. للتغريق: طبق حول منطقة الجذر.",
-    "recommendedDosage": "2–4 ml per liter of water",
-    "recommendedDosageAr": "2–4 مل لكل لتر ماء",
-    "applicationMethod": "Foliar spray or soil drench. Apply every 10–14 days.",
-    "applicationMethodAr": "رش ورقي أو تغريق للتربة. يُطبق كل 10–14 يوماً.",
-    "safetyPrecautions": [
-      "Wear protective gloves and eyewear.",
-      "Pre-harvest interval: 3 days.",
-      "Avoid repeated applications without rotation to prevent resistance.",
-      "Not harmful to bees when used correctly.",
-      "Do not contaminate water supplies."
+    "disease": "فيروس موزاييك الطماطم",
+    "scientificName": "Tomato mosaic virus (ToMV)",
+    "severity": "عالية جدًا",
+    "spreadSpeed": "سريع",
+    "isCurable": false,
+    "successRate": "لا يوجد علاج شافٍ",
+    "recoverTime": "غير متاح",
+    "cause": "فيروس ينتقل عن طريق البذور، الأدوات الملوثة، الأيدي، وبقايا النباتات المصابة.",
+    "symptoms": [
+      "تلون فسيفسائي أخضر وأصفر على الأوراق.",
+      "تجعد وتشوه الأوراق.",
+      "تباطؤ نمو النبات.",
+      "انخفاض إنتاج الثمار."
     ],
-    "safetyPrecautionsAr": [
-      "ارتدِ قفازات واقية وحماية للعينين.",
-      "فترة ما قبل الحصاد: 3 أيام.",
-      "تجنب التطبيقات المتكررة دون تناوب لمنع المقاومة.",
-      "غير ضار بالنحل عند الاستخدام الصحيح.",
-      "لا تلوث مصادر المياه."
+    "prevention": [
+      "استخدام بذور معتمدة.",
+      "تعقيم الأدوات باستمرار.",
+      "غسل اليدين قبل التعامل مع النباتات.",
+      "إزالة النباتات المصابة بالكامل."
     ],
-    "additionalNotes": "Excellent against late blight in rainy seasons. Works by inducing plant resistance mechanisms (Fosetyl-Al) and direct pathogen inhibition (Propamocarb).",
-    "additionalNotesAr": "ممتاز ضد اللفحة المتأخرة في مواسم الأمطار. يعمل عن طريق تحفيز آليات مقاومة النبات (فوسيتيل-Al) وتثبيط الممراض المباشر (بروباموكارب)."
+    "recommendedProducts": [],
+    "whenToHarvest": "يمكن حصاد الثمار السليمة إذا كانت صالحة للاستهلاك، لكن يفضل إزالة النبات المصاب لمنع انتشار الفيروس.",
+    "emergency": true,
+    "days": [
+      {
+        "day": 0,
+        "title": "إجراء عاجل",
+        "tasks": [
+          {
+            "title": "عزل النبات",
+            "description": "امنع ملامسة النبات المصاب للنباتات السليمة.",
+            "why": "لأن الفيروس ينتقل بسهولة بالملامسة.",
+            "tips": [
+              "اعمل على النباتات السليمة أولًا ثم المصابة."
+            ],
+            "warnings": [
+              "لا تستخدم نفس الأدوات دون تعقيم."
+            ],
+            "estimatedTime": "5 دقائق"
+          },
+          {
+            "title": "تعقيم الأدوات",
+            "description": "طهر المقص والأدوات بالكحول 70% أو بمحلول هيبوكلوريت الصوديوم المخفف.",
+            "why": "لمنع نقل الفيروس.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "10 دقائق"
+          }
+        ]
+      },
+      {
+        "day": 1,
+        "title": "إزالة النبات إذا كانت الإصابة شديدة",
+        "tasks": [
+          {
+            "title": "اقتلاع النبات",
+            "description": "إذا كانت معظم الأوراق مصابة، اقتلع النبات بالكامل وتخلص منه بعيدًا عن الحقل.",
+            "why": "لا يوجد علاج يقضي على الفيروس داخل النبات.",
+            "tips": [
+              "ضع النبات في كيس مغلق."
+            ],
+            "warnings": [
+              "لا تستخدمه في الكومبوست."
+            ],
+            "estimatedTime": "15 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "متابعة النباتات المجاورة",
+        "tasks": [
+          {
+            "title": "فحص النباتات",
+            "description": "راقب ظهور أعراض جديدة على النباتات القريبة.",
+            "why": "لاكتشاف الإصابات مبكرًا.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "15 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P009",
-    "productName": "Oberon (Spiromesifen)",
-    "productNameAr": "أوبيرون (سبيروميسيفن)",
-    "targetDiseases": ["Spider_mites_Two_spotted_spider_mite"],
-    "targetDiseasesAr": ["العنكبوت الأحمر ذو النقطتين"],
-    "activeIngredients": ["Spiromesifen 22.9% SC"],
-    "activeIngredientsAr": ["سبيروميسيفن 22.9% مستحلب"],
-    "description": "A selective miticide with a unique mode of action inhibiting lipid biosynthesis in mites. Effective against all life stages including eggs. Long residual activity.",
-    "descriptionAr": "مبيد أكاروسي انتقائي بآلية عمل فريدة تثبط تخليق الدهون في العناكب. فعّال ضد جميع مراحل الحياة بما فيها البيض. نشاط متبقي طويل الأمد.",
-    "usageInstructions": "Mix 0.5–0.75 ml per liter of water. Apply to thoroughly wet all leaf surfaces, including the undersides. Use high water volume for dense canopies.",
-    "usageInstructionsAr": "اخلط 0.5–0.75 مل لكل لتر ماء. طبق حتى تبليل جميع أسطح الأوراق بالكامل، بما فيها الجانب السفلي. استخدم حجماً كبيراً من الماء للنباتات الكثيفة.",
-    "recommendedDosage": "0.5–0.75 ml per liter of water",
-    "recommendedDosageAr": "0.5–0.75 مل لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Maximum 2 applications per season.",
-    "applicationMethodAr": "رش ورقي. الحد الأقصى تطبيقان في الموسم.",
-    "safetyPrecautions": [
-      "Wear gloves, protective clothing and eye protection.",
-      "Pre-harvest interval: 7 days.",
-      "Do not apply more than twice per season.",
-      "Harmful to aquatic organisms.",
-      "Moderately toxic to bees — avoid application during flowering."
+    "disease": "فيروس تجعد واصفرار أوراق الطماطم",
+    "scientificName": "Tomato Yellow Leaf Curl Virus (TYLCV)",
+    "severity": "عالية جدًا",
+    "spreadSpeed": "سريع جدًا",
+    "isCurable": false,
+    "successRate": "لا يوجد علاج شافٍ",
+    "recoverTime": "غير متاح",
+    "cause": "فيروس ينتقل بواسطة الذبابة البيضاء.",
+    "symptoms": [
+      "اصفرار الأوراق.",
+      "التفاف الأوراق لأعلى.",
+      "توقف النمو.",
+      "قلة تكوين الثمار."
     ],
-    "safetyPrecautionsAr": [
-      "ارتدِ قفازات وملابس واقية وحماية للعينين.",
-      "فترة ما قبل الحصاد: 7 أيام.",
-      "لا تطبق أكثر من مرتين في الموسم.",
-      "ضار بالكائنات المائية.",
-      "متوسط السمية للنحل — تجنب التطبيق أثناء الإزهار."
+    "prevention": [
+      "مكافحة الذبابة البيضاء.",
+      "تركيب مصائد صفراء لاصقة.",
+      "إزالة النباتات المصابة."
     ],
-    "additionalNotes": "Rotate Oberon with Acramite or Kanemite to manage mite resistance. No cross-resistance with organophosphates or pyrethroids.",
-    "additionalNotesAr": "قم بالتناوب بين أوبيرون وأكراميت أو كانيميت لإدارة مقاومة العناكب. لا توجد مقاومة متبادلة مع الفوسفات العضوي أو البيريثرويد."
+    "recommendedProducts": [
+      {
+        "tradeName": "Actara 25 WG",
+        "company": "Syngenta",
+        "activeIngredient": "Thiamethoxam",
+        "type": "مبيد حشري",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "راجع الملصق"
+      },
+      {
+        "tradeName": "Mospilan 20 SP",
+        "company": "Nippon Soda",
+        "activeIngredient": "Acetamiprid",
+        "type": "مبيد حشري",
+        "dose": "طبقًا للملصق",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "راجع الملصق"
+      }
+    ],
+    "whenToHarvest": "يمكن حصاد الثمار السليمة بعد انتهاء فترة الأمان الخاصة بآخر معاملة ضد الذبابة البيضاء.",
+    "emergency": true,
+    "days": [
+      {
+        "day": 0,
+        "title": "بداية المكافحة",
+        "tasks": [
+          {
+            "title": "تركيب مصائد صفراء",
+            "description": "ثبت مصيدة صفراء لاصقة كل 10-15 مترًا لمراقبة وتقليل الذبابة البيضاء.",
+            "why": "لأنها الناقل الرئيسي للفيروس.",
+            "tips": [
+              "استبدل المصيدة عند امتلائها بالحشرات."
+            ],
+            "warnings": [],
+            "estimatedTime": "10 دقائق"
+          },
+          {
+            "title": "رش مبيد ضد الذبابة البيضاء",
+            "description": "استخدم Actara أو Mospilan وفقًا للجرعة الموصى بها.",
+            "why": "لتقليل انتقال الفيروس إلى النباتات السليمة.",
+            "tips": [
+              "غطِّ السطح السفلي للأوراق جيدًا."
+            ],
+            "warnings": [
+              "لا تكرر نفس المادة الفعالة باستمرار."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "المتابعة",
+        "tasks": [
+          {
+            "title": "فحص أعداد الذبابة البيضاء",
+            "description": "راقب المصائد وافحص السطح السفلي للأوراق.",
+            "why": "لتقييم نجاح المكافحة.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "10 دقائق"
+          }
+        ]
+      },
+      {
+        "day": 10,
+        "title": "إعادة المكافحة",
+        "tasks": [
+          {
+            "title": "إعادة الرش عند الحاجة",
+            "description": "كرر الرش إذا استمرت الإصابة مع تبديل المادة الفعالة.",
+            "why": "لتجنب تكوين مقاومة للمبيد.",
+            "tips": [],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P010",
-    "productName": "Quadris (Azoxystrobin)",
-    "productNameAr": "كوادريس (أزوكسيستروبين)",
-    "targetDiseases": ["Early_blight", "Late_blight", "Septoria_leaf_spot", "Target_Spot", "Powdery_Mildew"],
-    "targetDiseasesAr": ["اللفحة المبكرة", "اللفحة المتأخرة", "تبقع أوراق السبتوريا", "البقعة الهدفية", "البياض الدقيقي"],
-    "activeIngredients": ["Azoxystrobin 22.9% SC (Strobilurin group)"],
-    "activeIngredientsAr": ["أزوكسيستروبين 22.9% (مجموعة الستروبيلورين)"],
-    "description": "A broad-spectrum systemic fungicide from the strobilurin group. Controls a wide range of fungal diseases in tomatoes with both protective and curative activity. Translocated acropetally in plant tissues.",
-    "descriptionAr": "مبيد فطري جهازي واسع الطيف من مجموعة الستروبيلورين. يكافح مجموعة واسعة من الأمراض الفطرية في الطماطم بنشاط وقائي وعلاجي. ينتقل باتجاه قمة النبات في الأنسجة.",
-    "usageInstructions": "Mix 1–1.5 ml per liter of water. Spray all plant surfaces evenly. Apply preventively before disease onset for maximum benefit.",
-    "usageInstructionsAr": "اخلط 1–1.5 مل لكل لتر ماء. رش جميع أسطح النبات بالتساوي. طبق وقائياً قبل ظهور المرض للحصول على أقصى فائدة.",
-    "recommendedDosage": "1–1.5 ml per liter of water",
-    "recommendedDosageAr": "1–1.5 مل لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Apply every 7–14 days. Maximum 4 applications per season.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 7–14 يوماً. الحد الأقصى 4 تطبيقات في الموسم.",
-    "safetyPrecautions": [
-      "Wear gloves and eye protection.",
-      "Pre-harvest interval: 0 days for tomatoes.",
-      "Do not apply more than 4 times per season — high resistance risk.",
-      "Highly toxic to aquatic organisms and fish.",
-      "Always rotate with fungicides from other chemical groups."
+    "disease": "البياض الدقيقي",
+    "scientificName": "Oidium neolycopersici",
+    "severity": "متوسطة",
+    "spreadSpeed": "متوسط",
+    "isCurable": true,
+    "successRate": "90-95%",
+    "recoverTime": "10-21 يومًا",
+    "cause": "مرض فطري ينتشر في الأجواء الدافئة مع ارتفاع الرطوبة وضعف التهوية، وينتقل عن طريق الجراثيم المحمولة بالهواء.",
+    "symptoms": [
+      "ظهور طبقة بيضاء تشبه الدقيق على الأوراق.",
+      "اصفرار الأوراق تدريجيًا.",
+      "جفاف وسقوط الأوراق.",
+      "ضعف نمو النبات وانخفاض الإنتاج."
     ],
-    "safetyPrecautionsAr": [
-      "ارتدِ قفازات وحماية للعينين.",
-      "فترة ما قبل الحصاد: 0 أيام للطماطم.",
-      "لا تطبق أكثر من 4 مرات في الموسم — خطر مقاومة عالٍ.",
-      "سام جداً للكائنات المائية والأسماك.",
-      "قم دائماً بالتناوب مع مبيدات فطرية من مجموعات كيميائية أخرى."
+    "prevention": [
+      "تحسين التهوية بين النباتات.",
+      "تجنب زيادة التسميد النيتروجيني.",
+      "إزالة الأوراق المصابة فورًا.",
+      "الفحص الدوري للنباتات."
     ],
-    "additionalNotes": "Widely used as a tank-mix partner. Resistance to strobilurins has been reported in some Alternaria and late blight populations — use as part of a resistance management program.",
-    "additionalNotesAr": "يُستخدم على نطاق واسع كشريك في مزيج الخزان. تم الإبلاغ عن مقاومة للستروبيلورينات في بعض أجناس الألتيرناريا واللفحة المتأخرة — استخدمه كجزء من برنامج إدارة المقاومة."
+    "recommendedProducts": [
+      {
+        "tradeName": "Topas 100 EC",
+        "company": "Syngenta",
+        "activeIngredient": "Penconazole",
+        "type": "علاجي ووقائي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 10,
+        "preHarvestInterval": "راجع ملصق العبوة"
+      },
+      {
+        "tradeName": "Thiovit Jet",
+        "company": "Syngenta",
+        "activeIngredient": "Sulfur",
+        "type": "وقائي",
+        "dose": "طبقًا لملصق العبوة",
+        "repeatAfterDays": 7,
+        "preHarvestInterval": "راجع الملصق"
+      }
+    ],
+    "whenToHarvest": "يمكن حصاد الثمار بعد انتهاء فترة الأمان (PHI) الخاصة بالمبيد المستخدم.",
+    "emergency": false,
+    "days": [
+      {
+        "day": 0,
+        "title": "بدء العلاج",
+        "tasks": [
+          {
+            "title": "إزالة الأوراق المصابة",
+            "description": "قص جميع الأوراق التي تغطيها الطبقة البيضاء باستخدام أداة معقمة، ثم ضعها في كيس مغلق وتخلص منها خارج المزرعة.",
+            "why": "لتقليل كمية الجراثيم التي قد تنتشر إلى النباتات السليمة.",
+            "tips": [
+              "ابدأ بالأوراق الأكثر إصابة.",
+              "عقم المقص بعد كل نبات."
+            ],
+            "warnings": [
+              "لا تترك الأوراق المصابة على التربة.",
+              "لا تستخدمها في السماد العضوي."
+            ],
+            "estimatedTime": "15 دقيقة"
+          },
+          {
+            "title": "الرش بالمبيد",
+            "description": "رش Topas أو Thiovit Jet مع تغطية جميع أجزاء النبات وخاصة السطح السفلي للأوراق.",
+            "why": "لإيقاف نمو الفطر وحماية الأوراق الجديدة.",
+            "tips": [
+              "الرش صباحًا أو قبل الغروب.",
+              "تأكد من وصول الرش لجميع الأوراق."
+            ],
+            "warnings": [
+              "لا ترش أثناء الحرارة المرتفعة.",
+              "التزم بالجرعة المدونة على العبوة."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "المراجعة الأولى",
+        "tasks": [
+          {
+            "title": "فحص النبات",
+            "description": "افحص الأوراق الجديدة وتأكد من عدم ظهور طبقة بيضاء جديدة.",
+            "why": "لتقييم مدى نجاح العلاج.",
+            "tips": [
+              "افحص النباتات المجاورة أيضًا."
+            ],
+            "warnings": [],
+            "estimatedTime": "10 دقائق"
+          }
+        ]
+      },
+      {
+        "day": 10,
+        "title": "إعادة الرش",
+        "tasks": [
+          {
+            "title": "الرشة الثانية",
+            "description": "إذا استمرت الإصابة أو كانت الظروف مناسبة لانتشار المرض، كرر الرش حسب تعليمات الملصق.",
+            "why": "لحماية النموات الحديثة ومنع عودة المرض.",
+            "tips": [
+              "يمكن تبديل المادة الفعالة لتقليل احتمالية المقاومة."
+            ],
+            "warnings": [
+              "لا تتجاوز عدد الرشات الموصى به."
+            ],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "P011",
-    "productName": "Agri-Mycin 100 (Oxytetracycline)",
-    "productNameAr": "أجري-مايسين 100 (أوكسيتتراسايكلين)",
-    "targetDiseases": ["Bacterial_spot"],
-    "targetDiseasesAr": ["البقعة البكتيرية"],
-    "activeIngredients": ["Oxytetracycline calcium complex 17%"],
-    "activeIngredientsAr": ["معقد أوكسيتتراسايكلين الكالسيوم 17%"],
-    "description": "An antibiotic bactericide used to control bacterial spot in tomatoes. Systemically absorbed to provide internal protection against bacterial infections.",
-    "descriptionAr": "مبيد بكتيري مضاد حيوي يُستخدم للسيطرة على البقعة البكتيرية في الطماطم. يُمتص جهازياً لتوفير حماية داخلية ضد العدوى البكتيرية.",
-    "usageInstructions": "Mix 1 tablespoon (15 g) per gallon of water. Apply as foliar spray to runoff. Begin applications at first sign of disease or after periods of warm, wet weather.",
-    "usageInstructionsAr": "اخلط ملعقة كبيرة (15 جرام) لكل غالون ماء. طبق كرش ورقي حتى نقطة الجريان. ابدأ التطبيقات عند أول ظهور للمرض أو بعد فترات الطقس الدافئ الرطب.",
-    "recommendedDosage": "3.5 g per liter of water",
-    "recommendedDosageAr": "3.5 جرام لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Apply every 4–7 days during disease pressure.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 4–7 أيام في حالة الضغط المرضي.",
-    "safetyPrecautions": [
-      "Antibiotic product — use judiciously to avoid resistance development in bacterial populations.",
-      "Pre-harvest interval: 7 days.",
-      "Wear gloves and protective clothing.",
-      "May cause skin and eye irritation.",
-      "Not for use in integrated pest management programs as the sole treatment."
+    "disease": "نبات سليم",
+    "scientificName": "Healthy Tomato Plant",
+    "severity": "لا يوجد",
+    "spreadSpeed": "لا يوجد",
+    "isCurable": true,
+    "successRate": "100%",
+    "recoverTime": "غير مطلوب",
+    "cause": "النبات لا يعاني من أي إصابة أو أعراض مرضية.",
+    "symptoms": [
+      "أوراق خضراء سليمة.",
+      "نمو طبيعي.",
+      "عدم وجود بقع أو اصفرار أو حشرات."
     ],
-    "safetyPrecautionsAr": [
-      "منتج مضاد حيوي — استخدمه بحكمة لتجنب تطور المقاومة في المجتمعات البكتيرية.",
-      "فترة ما قبل الحصاد: 7 أيام.",
-      "ارتدِ قفازات وملابس واقية.",
-      "قد يسبب تهيج الجلد والعيون.",
-      "غير مخصص للاستخدام كعلاج وحيد في برامج إدارة الآفات المتكاملة."
+    "prevention": [
+      "الاستمرار في الفحص الأسبوعي.",
+      "الري المنتظم دون إفراط.",
+      "التسميد المتوازن.",
+      "إزالة الحشائش باستمرار.",
+      "مراقبة الآفات والأمراض مبكرًا."
     ],
-    "additionalNotes": "Best used in alternation with copper-based bactericides (e.g., Cueva). Resistance to oxytetracycline has been documented in some Xanthomonas populations.",
-    "additionalNotesAr": "يُستخدم بشكل أفضل بالتناوب مع المبيدات البكتيرية النحاسية (مثل كيوفا). تم توثيق مقاومة للأوكسيتتراسايكلين في بعض أجناس زانثوموناس."
-  },
-  {
-    "id": "P012",
-    "productName": "Switch 62.5 WG (Cyprodinil + Fludioxonil)",
-    "productNameAr": "سويتش 62.5 WG (سيبروديناييل + فلوديوكسونيل)",
-    "targetDiseases": ["Leaf_Mold", "Target_Spot", "Early_blight"],
-    "targetDiseasesAr": ["عفن الأوراق", "البقعة الهدفية", "اللفحة المبكرة"],
-    "activeIngredients": ["Cyprodinil 37.5%", "Fludioxonil 25%"],
-    "activeIngredientsAr": ["سيبروديناييل 37.5%", "فلوديوكسونيل 25%"],
-    "description": "A combination fungicide with two active ingredients targeting different biochemical pathways in fungi. Provides excellent disease control with both protective and curative properties.",
-    "descriptionAr": "مبيد فطري مركب بمادتين فعّالتين تستهدفان مسارين بيوكيميائيين مختلفين في الفطريات. يوفر مكافحة ممتازة للأمراض بخصائص وقائية وعلاجية.",
-    "usageInstructions": "Mix 0.8–1.2 g per liter of water. Spray thoroughly to cover all plant parts. Apply at early stage of disease development for best results.",
-    "usageInstructionsAr": "اخلط 0.8–1.2 جرام لكل لتر ماء. رش بشكل شامل لتغطية جميع أجزاء النبات. طبق في المرحلة المبكرة من تطور المرض للحصول على أفضل النتائج.",
-    "recommendedDosage": "0.8–1.2 g per liter of water",
-    "recommendedDosageAr": "0.8–1.2 جرام لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Apply every 7–10 days. Maximum 3 applications per season.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 7–10 أيام. الحد الأقصى 3 تطبيقات في الموسم.",
-    "safetyPrecautions": [
-      "Wear appropriate PPE including gloves and eye protection.",
-      "Pre-harvest interval: 1 day.",
-      "Moderately harmful to aquatic organisms.",
-      "Store away from food and children.",
-      "Maximum 3 applications per crop to minimize resistance risk."
-    ],
-    "safetyPrecautionsAr": [
-      "ارتدِ معدات الحماية المناسبة بما فيها القفازات وحماية العينين.",
-      "فترة ما قبل الحصاد: يوم واحد.",
-      "متوسط الضرر على الكائنات المائية.",
-      "احفظه بعيداً عن الطعام والأطفال.",
-      "الحد الأقصى 3 تطبيقات في المحصول لتقليل خطر المقاومة."
-    ],
-    "additionalNotes": "Particularly effective for greenhouse tomatoes against Cladosporium (leaf mold). The dual mode of action significantly reduces resistance risk compared to single-active fungicides.",
-    "additionalNotesAr": "فعّال بشكل خاص لطماطم البيوت المحمية ضد كلادوسبوريوم (عفن الأوراق). آلية العمل المزدوجة تقلل بشكل كبير من خطر المقاومة مقارنة بالمبيدات الفطرية ذات المادة الفعّالة الواحدة."
-  },
-  {
-    "id": "P013",
-    "productName": "Movento (Spirotetramat)",
-    "productNameAr": "موفينتو (سبيروتيترامات)",
-    "targetDiseases": ["Tomato_Yellow_Leaf_Curl_Virus"],
-    "targetDiseasesAr": ["فيروس تجعد أوراق الطماطم الصفراء (TYLCV)"],
-    "activeIngredients": ["Spirotetramat 15% OD"],
-    "activeIngredientsAr": ["سبيروتيترامات 15% (تشتيت زيتي)"],
-    "description": "A systemic insecticide with both upward and downward translocation in the plant. Controls whitefly populations (vector of TYLCV) by inhibiting lipid biosynthesis in insects. Unique two-way systemic movement.",
-    "descriptionAr": "مبيد حشري جهازي بنقل ثنائي الاتجاه (صاعد وهابط) في النبات. يكافح أجناس الذبابة البيضاء (ناقل TYLCV) عن طريق تثبيط تخليق الدهون في الحشرات. حركة جهازية فريدة ثنائية الاتجاه.",
-    "usageInstructions": "Mix 1–1.5 ml per liter of water. Add a penetrant adjuvant (surfactant) to improve absorption. Apply to all plant surfaces.",
-    "usageInstructionsAr": "اخلط 1–1.5 مل لكل لتر ماء. أضف مادة تثبيت/ناشر لتحسين الامتصاص. طبق على جميع أسطح النبات.",
-    "recommendedDosage": "1–1.5 ml per liter of water (with adjuvant)",
-    "recommendedDosageAr": "1–1.5 مل لكل لتر ماء (مع مادة ناشرة)",
-    "applicationMethod": "Foliar spray. Apply every 14–21 days. Maximum 2 applications per season.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 14–21 يوماً. الحد الأقصى تطبيقان في الموسم.",
-    "safetyPrecautions": [
-      "Moderately toxic to bees — apply in evening to reduce bee exposure.",
-      "Pre-harvest interval: 3 days.",
-      "Wear gloves and protective clothing.",
-      "Avoid contact with eyes.",
-      "Do not use in water near fish breeding areas."
-    ],
-    "safetyPrecautionsAr": [
-      "متوسط السمية للنحل — طبق مساءً لتقليل تعرض النحل.",
-      "فترة ما قبل الحصاد: 3 أيام.",
-      "ارتدِ قفازات وملابس واقية.",
-      "تجنب ملامسة العيون.",
-      "لا تستخدم بالقرب من مناطق تكاثر الأسماك."
-    ],
-    "additionalNotes": "Requires a penetrant adjuvant for optimal efficacy. Good for whitefly populations resistant to neonicotinoids (like Imidacloprid). Very effective against crawlers (young nymphs).",
-    "additionalNotesAr": "يتطلب مادة ناشرة للحصول على فاعلية مثلى. جيد لمجتمعات الذبابة البيضاء المقاومة للنيونيكوتينويد (مثل الإيميداكلوبريد). فعّال جداً ضد الحوريات الصغيرة."
-  },
-  {
-    "id": "P014",
-    "productName": "Ridomil Gold MZ (Metalaxyl-M + Mancozeb)",
-    "productNameAr": "ريدوميل جولد MZ (ميتالاكسيل-M + مانكوزيب)",
-    "targetDiseases": ["Late_blight", "Early_blight"],
-    "targetDiseasesAr": ["اللفحة المتأخرة", "اللفحة المبكرة"],
-    "activeIngredients": ["Metalaxyl-M 4%", "Mancozeb 64%"],
-    "activeIngredientsAr": ["ميتالاكسيل-M 4%", "مانكوزيب 64%"],
-    "description": "A combination fungicide containing both a systemic (Metalaxyl-M) and a contact (Mancozeb) component. Provides dual protection against late blight. The systemic component treats existing infections while the contact component prevents new ones.",
-    "descriptionAr": "مبيد فطري مركب يحتوي على مكون جهازي (ميتالاكسيل-M) ومكون تلامسي (مانكوزيب). يوفر حماية مزدوجة ضد اللفحة المتأخرة. المكون الجهازي يعالج الإصابات الموجودة بينما يمنع المكون التلامسي الإصابات الجديدة.",
-    "usageInstructions": "Mix 2.5 g per liter of water. Apply as foliar spray with thorough coverage. Begin applications preventively or at first sign of disease.",
-    "usageInstructionsAr": "اخلط 2.5 جرام لكل لتر ماء. طبق كرش ورقي مع تغطية كاملة. ابدأ التطبيقات وقائياً أو عند أول ظهور للمرض.",
-    "recommendedDosage": "2.5 g per liter of water",
-    "recommendedDosageAr": "2.5 جرام لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Apply every 10–14 days. Maximum 3 applications per season.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 10–14 يوماً. الحد الأقصى 3 تطبيقات في الموسم.",
-    "safetyPrecautions": [
-      "Pre-harvest interval: 7 days.",
-      "Wear full PPE — respirator recommended when mixing powder.",
-      "Resistance to Metalaxyl has been reported — rotate with unrelated fungicides.",
-      "Toxic to aquatic organisms.",
-      "Do not use in areas with high water table."
-    ],
-    "safetyPrecautionsAr": [
-      "فترة ما قبل الحصاد: 7 أيام.",
-      "ارتدِ معدات الحماية الكاملة — يُنصح بقناع التنفس عند تحضير المسحوق.",
-      "تم الإبلاغ عن مقاومة للميتالاكسيل — قم بالتناوب مع مبيدات فطرية غير ذات صلة.",
-      "سام للكائنات المائية.",
-      "لا تستخدم في مناطق ذات مستوى مياه جوفية مرتفع."
-    ],
-    "additionalNotes": "A gold standard for late blight management for decades. Resistance to Metalaxyl is well-documented in P. infestans — never use Metalaxyl alone; always combine with contact fungicide.",
-    "additionalNotesAr": "معيار ذهبي لإدارة اللفحة المتأخرة منذ عقود. مقاومة الميتالاكسيل موثقة جيداً في P. infestans — لا تستخدم الميتالاكسيل وحده أبداً؛ اجمعه دائماً مع مبيد تلامسي."
-  },
-  {
-    "id": "P015",
-    "productName": "Trilogy (Neem Oil 70%)",
-    "productNameAr": "ترايلوجي (زيت النيم 70%)",
-    "targetDiseases": ["Powdery_Mildew", "Spider_mites_Two_spotted_spider_mite", "Early_blight"],
-    "targetDiseasesAr": ["البياض الدقيقي", "العنكبوت الأحمر ذو النقطتين", "اللفحة المبكرة"],
-    "activeIngredients": ["Clarified hydrophobic extract of neem oil 70%"],
-    "activeIngredientsAr": ["مستخلص زيت النيم الهيدروفوبي المنقى 70%"],
-    "description": "An organic, OMRI-listed fungicide and miticide derived from neem oil. Controls a wide range of fungal diseases and mites through contact action. Safe for beneficial insects when used correctly.",
-    "descriptionAr": "مبيد فطري وأكاروسي عضوي مستمد من زيت النيم، مدرج في قائمة OMRI. يكافح مجموعة واسعة من الأمراض الفطرية والعناكب من خلال التأثير التلامسي. آمن على الحشرات المفيدة عند الاستخدام الصحيح.",
-    "usageInstructions": "Mix 10–20 ml per liter of water with a few drops of liquid dish soap (emulsifier). Shake vigorously and apply immediately. Apply in early morning or evening to avoid phytotoxicity.",
-    "usageInstructionsAr": "اخلط 10–20 مل لكل لتر ماء مع بضع قطرات من صابون سائل (مستحلب). رج بقوة وطبق فوراً. طبق في الصباح الباكر أو المساء لتجنب السمية النباتية.",
-    "recommendedDosage": "10–20 ml per liter of water",
-    "recommendedDosageAr": "10–20 مل لكل لتر ماء",
-    "applicationMethod": "Foliar spray. Apply every 7–14 days. Apply at dusk or dawn.",
-    "applicationMethodAr": "رش ورقي. يُطبق كل 7–14 يوماً. طبق عند الغسق أو الفجر.",
-    "safetyPrecautions": [
-      "Avoid application during the heat of the day — risk of leaf burn.",
-      "Do not apply to stressed plants (drought, heat stress).",
-      "Safe for beneficial insects when dry.",
-      "May cause skin irritation in sensitive individuals.",
-      "Pre-harvest interval: 0 days (organic product)."
-    ],
-    "safetyPrecautionsAr": [
-      "تجنب التطبيق أثناء حرارة النهار — خطر حرق الأوراق.",
-      "لا تطبق على نباتات متوترة (جفاف، إجهاد حراري).",
-      "آمن على الحشرات المفيدة عند الجفاف.",
-      "قد يسبب تهيج الجلد لدى الأفراد الحساسين.",
-      "فترة ما قبل الحصاد: 0 أيام (منتج عضوي)."
-    ],
-    "additionalNotes": "Excellent choice for organic farmers. Best results when used preventively. Has both fungicidal and insecticidal properties. Strong odor is normal and dissipates quickly.",
-    "additionalNotesAr": "خيار ممتاز للمزارعين العضويين. أفضل النتائج عند الاستخدام الوقائي. له خصائص مبيدة للفطر والحشرات. الرائحة القوية طبيعية وتتبدد بسرعة."
+    "recommendedProducts": [],
+    "whenToHarvest": "يمكن الحصاد في الموعد الطبيعي للمحصول.",
+    "emergency": false,
+    "days": [
+      {
+        "day": 7,
+        "title": "متابعة أسبوعية",
+        "tasks": [
+          {
+            "title": "فحص الأوراق",
+            "description": "افحص الأوراق من الأعلى والأسفل للتأكد من عدم وجود بقع أو حشرات أو تغير في اللون.",
+            "why": "للكشف المبكر عن أي مشكلة قبل انتشارها.",
+            "tips": [
+              "خصص يومًا ثابتًا كل أسبوع للفحص."
+            ],
+            "warnings": [],
+            "estimatedTime": "10 دقائق"
+          },
+          {
+            "title": "مراجعة الري",
+            "description": "تأكد من أن التربة رطبة وليست مشبعة بالماء، وعدل مواعيد الري حسب حالة الطقس.",
+            "why": "الإفراط أو النقص في الري يضعف النبات ويزيد احتمالية الإصابة بالأمراض.",
+            "tips": [
+              "يفضل الري في الصباح الباكر."
+            ],
+            "warnings": [
+              "تجنب تجمع المياه حول الجذور."
+            ],
+            "estimatedTime": "10 دقائق"
+          }
+        ]
+      },
+      {
+        "day": 14,
+        "title": "الصيانة الدورية",
+        "tasks": [
+          {
+            "title": "إزالة الحشائش",
+            "description": "أزل الحشائش المحيطة بالنبات حتى لا تنافسه على الماء والغذاء ولا تكون مأوى للآفات.",
+            "why": "للحفاظ على صحة النبات وتقليل فرص الإصابة.",
+            "tips": [
+              "تخلص من الحشائش خارج الحقل."
+            ],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          },
+          {
+            "title": "فحص الحشرات",
+            "description": "ابحث عن الذبابة البيضاء والمن والعناكب الحمراء وغيرها من الآفات.",
+            "why": "الاكتشاف المبكر يمنع انتشار الإصابة.",
+            "tips": [
+              "افحص السطح السفلي للأوراق."
+            ],
+            "warnings": [],
+            "estimatedTime": "15 دقيقة"
+          }
+        ]
+      },
+      {
+        "day": 30,
+        "title": "متابعة شهرية",
+        "tasks": [
+          {
+            "title": "تقييم شامل للنبات",
+            "description": "راجع النمو، وعدد الأزهار والثمار، ولون الأوراق، وحالة الساق والجذور الظاهرة، وسجل أي ملاحظات في التطبيق.",
+            "why": "لمتابعة صحة النبات وتحسين الإنتاج.",
+            "tips": [
+              "التقط صورة للنبات كل شهر للمقارنة."
+            ],
+            "warnings": [],
+            "estimatedTime": "20 دقيقة"
+          }
+        ]
+      }
+    ]
   }
 ]
